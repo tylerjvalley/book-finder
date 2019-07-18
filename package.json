@@ -1,0 +1,19 @@
+{
+  "name": "book-search-backend",
+  "version": "1.0.0",
+  "description": "Backend for book finder app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Tyler Valley",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
