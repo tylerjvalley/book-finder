@@ -1,24 +1,81 @@
 const express = require('express');
-const cors = require('cors');
-
 const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const bookRoutes = express.Router();
+const port = 3001;
+
+let Book = require('./book.model');
+
 
 app.use(cors());
+app.use(bodyParser.json());
+mongoose.connect('mongodb://127.0.0.1:27017/books', { useNewUrlParser: true }); //creates connection to mongo db
+const connection = mongoose.connection;
 
-app.get('/api/books', (req, res) => {
-    const books = [
-        /* put data here? */
-        {id: 1, book: 'Harry Potter'},
-        { id: 2, book: 'Bible' },
-        { id: 3, book: 'Qaran' },
-        { id: 4, book: 'The Outsiders' }
-        
-    ];
-
-    res.json(books);
+connection.once('open', () => {
+    console.log('MongoDB database connection established successfully');
 });
 
-const port = 5000;
+
+
+booksRoutes.route('/').get((req, res) => {
+    Book.find((err, book) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.json(book)
+        }
+    });
+});
+
+bookRoutes.route('/:id').get((req, res) => {
+    //retrieve a single book based on id
+    let id = req.params.id;
+    Book.findById(id, (err, book) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.json(book)
+        }
+    })
+});
+
+bookRoutes.route('/add').post((req, res) => {
+    //add a book to the db
+    let book = new Book(req.body);
+    book.save()
+        .then(todo => {
+            res.status(200).json({'book': 'book added successfully'})
+        })
+        .catch(err => {
+            res.status(400).send('adding new book failed')
+        })
+});
+
+bookRoutes.route('/update/:id').post((req, res) => {
+    Book.findById(req.params.id, (err, book) => {
+        if (!book) {
+            res.status(404).send('Data was not found')
+        } else {
+            book.book_title = req.body.book_title;
+            book.book_rating = req.body.book_rating;
+            book.book_review = req.body.book_review;
+
+            book.save().then(res => {
+                res.json('Book Updated')
+            })
+            .catch(err => {
+                res.status(400).send('Update did not go through');
+            })
+        }   
+    })
+})
+
+
+app.use('/book', bookRoutes);
+
 
 app.listen(port, () => {
     console.log(`server started on port ${port}`);
