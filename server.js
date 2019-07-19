@@ -11,6 +11,7 @@ let Book = require('./book.model');
 
 app.use(cors());
 app.use(bodyParser.json());
+
 mongoose.connect('mongodb://127.0.0.1:27017/books', { useNewUrlParser: true }); //creates connection to mongo db
 const connection = mongoose.connection;
 
@@ -20,12 +21,12 @@ connection.once('open', () => {
 
 
 
-booksRoutes.route('/').get((req, res) => {
-    Book.find((err, book) => {
+bookRoutes.route('/').get((req, res) => {
+    Book.find((err, books) => {
         if (err) {
             console.log(err)
         } else {
-            res.json(book)
+            res.json(books)
         }
     });
 });
@@ -62,8 +63,9 @@ bookRoutes.route('/update/:id').post((req, res) => {
             book.book_title = req.body.book_title;
             book.book_rating = req.body.book_rating;
             book.book_review = req.body.book_review;
+            book.book_completed = req.body.book_completed;
 
-            book.save().then(res => {
+            book.save().then(book => {
                 res.json('Book Updated')
             })
             .catch(err => {
@@ -74,7 +76,7 @@ bookRoutes.route('/update/:id').post((req, res) => {
 })
 
 
-app.use('/book', bookRoutes);
+app.use('/books', bookRoutes);
 
 
 app.listen(port, () => {

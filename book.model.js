@@ -12,6 +12,10 @@ let Book = new Schema({
 
     book_review: {
         type: String
+    },
+
+    book_completed: {
+        type: Boolean
     }
 })
 

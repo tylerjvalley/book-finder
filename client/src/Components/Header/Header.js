@@ -13,10 +13,7 @@ class Header extends Component {
     }
 
     componentDidMount() {
-       axios.get('/api/books')
-       .then(res => {
-           this.setState({books: res.data})
-       })
+       
 
     }
 
@@ -25,15 +22,7 @@ class Header extends Component {
     }
 
     handleSubmit = () => {
-        axios.post('http://localhost:3001/api/books', {
-           book: this.state.search
-       })
-       .then(res => {
-           console.log(res)
-       })
-       .catch(err => {
-           console.log(err)
-       })
+        
     }
 
 
