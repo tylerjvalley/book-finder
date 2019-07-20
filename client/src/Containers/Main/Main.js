@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import SearchForm from './SearchForm/SearchForm';
+import SearchForm from '../../Components/SearchForm/SearchForm';
+import SearchResults from '../../Components/SearchResults/SearchResults';
 import axios from 'axios';
 import { apiKey, bookSearchUrl } from '../../assets/assets';
 
 
 
 
-class Header extends Component {
+class Main extends Component {
 
     state = {
         search: '',
@@ -25,7 +26,7 @@ class Header extends Component {
     handleSubmit = () => {
         axios.get(bookSearchUrl + this.state.search + `&key=${apiKey}`)
             .then(res => {
-                console.log(res)
+                this.setState({books: res.data.items}, () => console.log(this.state.books) )
             })
             .catch(err => {
                 console.log(err);
@@ -39,15 +40,10 @@ class Header extends Component {
             <>
             <SearchForm search={this.handleSearchInput}
                         submit={this.handleSubmit} /> 
-
-            {this.state.books.map(book => {
-                return (
-                    <div style={{background: 'white'}} key={book.id}>
-                        <h4>{book.id}</h4>
-                        <h1>{book.book}</h1>
-                    </div>
-                )
-            })}
+            
+            <SearchResults books={this.state.books}/>
+            
+        
 
             </>
 
@@ -57,4 +53,4 @@ class Header extends Component {
 }
 
 
-export default Header;
+export default Main;

@@ -4,3 +4,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
+.search-item h1 {
+  color: white;
+}
