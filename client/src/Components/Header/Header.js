@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchForm from './SearchForm/SearchForm';
 import axios from 'axios';
+import { apiKey, bookSearchUrl } from '../../assets/assets';
 
 
 
@@ -22,7 +23,13 @@ class Header extends Component {
     }
 
     handleSubmit = () => {
-        
+        axios.get(bookSearchUrl + this.state.search + `&key=${apiKey}`)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
 

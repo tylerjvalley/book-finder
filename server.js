@@ -73,6 +73,16 @@ bookRoutes.route('/update/:id').post((req, res) => {
             })
         }   
     })
+});
+
+bookRoutes.route('/delete/:id').delete((req, res) => {
+    Book.findByIdAndDelete(req.params.id)
+        .then(book => {
+            console.log('deleted successfully')
+        })
+        .catch(err => {
+            console.log('something went wrong')
+        })
 })
 
 
