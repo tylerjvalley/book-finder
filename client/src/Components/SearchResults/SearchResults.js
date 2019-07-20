@@ -1,41 +1,102 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
-
-
-
-
+import Container from '@material-ui/core/Container';
 
 
 
 
 const useStyles = makeStyles({
+    booksSection: {
+        marginTop: '20%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
 
-    
+    searchItem: {
+        background: '#355C7D',
+        opacity: '.75',
+        width: '50%',
+        color: 'white',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        border: '2px solid white',
+        padding: '2em',
+        margin: '2em'
+    },
+
+    title: {
+        color: 'white',
+        textAlign: 'center',
+    },
+
+    authors: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+    },
+
+    author: {
+        color: 'white',
+        margin: '0 1em'
+    },
+
+    buttons: {
+        padding: '1em',
+    },
+
+    button: {
+        margin: '1em'
+    }
 
 });
 
+
+
 function SearchResults(props) {
     const classes = useStyles();
+    
     return (
-        <div className="books-section">
+        <Container className={classes.booksSection}>
 
             {
 
                 props.books.map(book => {
-
+                   
                     return (
-                        <div className="search-item" key={book.id}>
+                        <div className={classes.searchItem} key={book.id}>
                             <img src={book.volumeInfo.imageLinks.thumbnail} alt="Book thumbnail" />
-                            <h1>{book.volumeInfo.title}</h1>
-                            <h4>{book.volumeInfo.author}</h4>
+                            <h1 className={classes.title}>{book.volumeInfo.title}</h1>
+                            <h4>Author:</h4>
+                            <div className={classes.authors}>
+                                
+                            {
+                                book.volumeInfo.authors.map(author => {
+                                
+                                    return (<h4 key={author} className={classes.author}>{author}</h4>)
+                               
+                                })
+                            }
+                            </div>
+                            <div className={classes.buttons}>
+                                <Button variant="outlined" color="inherit" className={classes.button}>
+                                    Google Books Link
+                                </Button>
+                                <Button variant="outlined" color="inherit" className={classes.button}>
+                                    Add to Bookshelf
+                                </Button>
+                             </div>
                         </div>
                     )
 
                 })
 
             }
-        </div>
+        </Container>
     );
 }
 

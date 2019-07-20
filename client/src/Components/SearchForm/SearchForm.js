@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     },
 
     form: {
-        background: '#355C7D',  /* fallback for old browsers */
+        background: '#355C7D', 
         width: '100%',
     },
     
