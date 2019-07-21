@@ -59,43 +59,62 @@ const useStyles = makeStyles({
 
 function SearchResults(props) {
     const classes = useStyles();
+
+
+    //pass in books array through props, map through each one and display.
+
+    const results = (books) => {
+
+       const result = books.map(book => {
+
+           /* Only show results with images  */
+            if (book.volumeInfo.imageLinks) {
+                return (
+
+                    <div className={classes.searchItem} key={book.id}>
+
+                        <img src={book.volumeInfo.imageLinks.thumbnail} alt="Book thumbnail" />
+
+                        <h1 className={classes.title}>{book.volumeInfo.title}</h1>
+                        <h4>Author:</h4>
+                        <div className={classes.authors}>
+
+                            {
+                                book.volumeInfo.authors.map(author => {
+
+                                    return (<h4 key={author} className={classes.author}>{author}</h4>)
+
+                                })
+                            }
+                        </div>
+                        <div className={classes.buttons}>
+                            <Button variant="outlined" color="inherit" className={classes.button}>
+                                Google Books Link
+                                </Button>
+                            <Button variant="outlined" color="inherit" className={classes.button}>
+                                Add to Bookshelf
+                                </Button>
+                        </div>
+                    </div>
+
+                )
+            } else {
+                return null //don't show the book without image 
+            }
+        })
+
+        return result
+    }
+    
+
+
+
+
+
     
     return (
         <Container className={classes.booksSection}>
-
-            {
-
-                props.books.map(book => {
-                   
-                    return (
-                        <div className={classes.searchItem} key={book.id}>
-                            <img src={book.volumeInfo.imageLinks.thumbnail} alt="Book thumbnail" />
-                            <h1 className={classes.title}>{book.volumeInfo.title}</h1>
-                            <h4>Author:</h4>
-                            <div className={classes.authors}>
-                                
-                            {
-                                book.volumeInfo.authors.map(author => {
-                                
-                                    return (<h4 key={author} className={classes.author}>{author}</h4>)
-                               
-                                })
-                            }
-                            </div>
-                            <div className={classes.buttons}>
-                                <Button variant="outlined" color="inherit" className={classes.button}>
-                                    Google Books Link
-                                </Button>
-                                <Button variant="outlined" color="inherit" className={classes.button}>
-                                    Add to Bookshelf
-                                </Button>
-                             </div>
-                        </div>
-                    )
-
-                })
-
-            }
+            {results(props.books)}
         </Container>
     );
 }

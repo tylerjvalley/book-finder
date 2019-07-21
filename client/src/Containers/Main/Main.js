@@ -3,8 +3,11 @@ import SearchForm from '../../Components/SearchForm/SearchForm';
 import SearchResults from '../../Components/SearchResults/SearchResults';
 import axios from 'axios';
 import { apiKey, bookSearchUrl } from '../../assets/assets';
+import axiosCancel from 'axios-cancel';
 
-
+axiosCancel(axios, {
+    debug: false
+});
 
 
 class Main extends Component {
@@ -14,25 +17,27 @@ class Main extends Component {
         books: [],
     }
 
-    componentDidMount() {
-       
-
-    }
-
     handleSearchInput = (e) => {
         this.setState({search: e.target.value})
     }
 
     handleSubmit = () => {
-        axios.get(bookSearchUrl + this.state.search + `&key=${apiKey}`)
-            .then(res => {
-                this.setState({books: res.data.items}, () => console.log(this.state.books) )
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    }
+        const request = `${bookSearchUrl}${this.state.search}&key=${apiKey}`
+        axios.get(request)
+        .then(res => {
+            this.setState({books: res.data.items}, () => console.log(this.state.books) )
+        })
+        .catch(thrown => {
+            if (axios.isCancel(thrown)) {
+                console.log(thrown);
+            } else {
+                console.log('another reason')
+            }
+            
+        })
 
+    }
+    
 
     render() {
 
