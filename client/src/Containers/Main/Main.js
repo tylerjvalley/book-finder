@@ -3,11 +3,6 @@ import SearchForm from '../../Components/SearchForm/SearchForm';
 import SearchResults from '../../Components/SearchResults/SearchResults';
 import axios from 'axios';
 import { apiKey, bookSearchUrl } from '../../assets/assets';
-import axiosCancel from 'axios-cancel';
-
-axiosCancel(axios, {
-    debug: false
-});
 
 
 class Main extends Component {
@@ -22,19 +17,30 @@ class Main extends Component {
     }
 
     handleSubmit = () => {
-        const request = `${bookSearchUrl}${this.state.search}&key=${apiKey}`
+        const request = `${bookSearchUrl}${this.state.search}&key=${apiKey}`;
+        let isValid = true;
+
         axios.get(request)
         .then(res => {
-            this.setState({books: res.data.items}, () => console.log(this.state.books) )
-        })
-        .catch(thrown => {
-            if (axios.isCancel(thrown)) {
-                console.log(thrown);
+            res.data.items.forEach(item => {
+                if (!item.volumeInfo.authors) {
+                    isValid = false;
+                }
+                
+            })
+
+            //check for valid search based on if the searched book has authors.
+            if (isValid) {
+                this.setState({ books: res.data.items }, () => console.log(this.state.books))
             } else {
-                console.log('another reason')
+                alert('no results found');
             }
-            
+           
+           
         })
+        .catch(error => {
+            console.log(error);          
+        });
 
     }
     
