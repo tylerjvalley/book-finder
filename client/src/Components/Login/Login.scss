@@ -96,7 +96,7 @@
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
     width: 500px;
-    height: 400px;
+    height: 450px;
     z-index: 10;
     background-color: white;
     color: blue;
@@ -148,6 +148,7 @@
 }
 
 .LogInFields {
+    margin-top: 10%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -167,15 +168,10 @@
     }
 }
 
-.LoginLogo {
-    width: 100px;
-    margin: 20px;
-}
-
-.LoginClose {
+.loginExit {
     position: absolute;
-    top: 10px;
-    font-size: 2rem;
-    right: 20px;
+    font-size: 30px;
     cursor: pointer;
+    top: -9%;
+    left: 2%;
 }

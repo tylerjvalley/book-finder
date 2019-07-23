@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchForm from '../../Components/SearchForm/SearchForm';
+import SearchForm from '../SearchForm/SearchForm';
 import SearchResults from '../../Components/SearchResults/SearchResults';
 import axios from 'axios';
 import { apiKey, bookSearchUrl } from '../../assets/assets';
@@ -22,7 +22,7 @@ class Main extends Component {
 
         axios.get(request)
         .then(res => {
-            
+
             res.data.items.forEach(item => {
                 if (!item.volumeInfo.authors) {
                     isValid = false;
