@@ -1,5 +1,6 @@
 import React from 'react';
-import Login from '../../Components/Login/Login';
+import Login from '../../Components/Auth/Login/Login';
+import SignUp from '../../Components/Auth/SignUp/SignUp';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -12,21 +13,33 @@ import SearchIcon from '@material-ui/icons/Search';
 
 
 
+
   
 const useStyles = makeStyles({
 
-    titleContainer: {
+    top: {
         width: '100%',
-        height: '20%',
-        background: '#355C7D',
+        background: '#355C7D', 
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+
+    titleContainer: {
+        margin: 'auto',
     },
 
     title: {
         color: 'white',
-        padding: '1rem',
         fontSize: '45px',
         fontFamily: 'DM Serif Display',
-        textAlign: 'center'
+        
+    },
+
+    buttonsContainer: {
+        display: 'flex',
+        flexWrap: 'nowrap',
     },
 
     form: {
@@ -51,6 +64,8 @@ const useStyles = makeStyles({
         zIndex: '2',
     },
 
+    
+
     button: {
         width: '15%',
         margin: '1em auto',
@@ -74,11 +89,17 @@ function SearchForm(props) {
 
 
     return (<>
-            <div className={classes.titleContainer}>
-            <h1 className={classes.title}>Book Finder</h1>
-            </div>
+            <div className={classes.top}>
+                <div className={classes.titleContainer}>
+                    <h1 className={classes.title}>Book Finder</h1>
+                </div>
 
-            <Login />
+                <div className={classes.buttonsContainer}>
+                    <Login />
+                    <SignUp />
+                </div>
+            </div>
+           
 
             <FormControl className={classes.form}>
                

@@ -12,7 +12,7 @@ const validateLoginInput = require('../../validation/login');
 // Load User model
 const User = require('../../models/User');
 
-router.route('/sign-up').post((req, res) => {
+router.post('/sign-up', (req, res) => {
     //Form Validation
 
     const { errors, isValid } = validateSignUpInput(req.body)
@@ -49,7 +49,7 @@ router.route('/sign-up').post((req, res) => {
 
 
 
-router.route('/login').post((req, res) => {
+router.post('/login', (req, res) => {
     //Form Validation
 
     const { errors, isValid } = validateLoginInput(req.body)
