@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
+import { addBook } from '../../assets/utils';
 
 
 
@@ -14,7 +15,7 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'center'
     },
-
+ 
     searchItem: {
         background: '#355C7D',
         opacity: '.75',
@@ -55,6 +56,15 @@ const useStyles = makeStyles({
 
 });
 
+const addBookHandler = (book) => {
+    const addedBook = {
+        book_title: book.title,
+        book_image: book.imageLinks.thumbnail,
+    }
+
+    addBook(addedBook);
+}
+
 
 
 function SearchResults(props) {
@@ -90,10 +100,10 @@ function SearchResults(props) {
                         <div className={classes.buttons}>
                             <Button variant="outlined" color="inherit" className={classes.button}>
                                 Google Books Link
-                                </Button>
-                            <Button variant="outlined" color="inherit" className={classes.button}>
+                            </Button>
+                            <Button variant="outlined" color="inherit" className={classes.button} onClick={() => addBookHandler(book.volumeInfo)}>
                                 Add to Bookshelf
-                                </Button>
+                            </Button>
                         </div>
                     </div>
 

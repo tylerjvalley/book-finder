@@ -4,7 +4,13 @@ const Schema = mongoose.Schema;
 let Book = new Schema({
 
     book_title: {
-        type: String
+        type: String,
+        required: true
+    },
+
+    book_image: {
+        type: String,
+        required: true
     },
 
     book_rating: {
@@ -16,11 +22,11 @@ let Book = new Schema({
     },
 
     book_in_progress: {
-        type: Boolean
+        type: String
     },
 
     book_completed: {
-        type: Boolean
+        type: String
     }
 })
 

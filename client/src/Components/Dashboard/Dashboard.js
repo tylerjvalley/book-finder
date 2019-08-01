@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+import { getBooks } from '../../assets/utils';
 import './Dashboard.scss';
 
 
 class Dashboard extends Component {
+
+    state = {
+        books: [],
+    }
+
+    componentDidMount() {
+       
+       getBooks().then(res => {
+            this.setState({ books: res }, () => console.log(this.state.books));
+       })  
+        
+    }
 
     render() {
 
@@ -28,11 +41,19 @@ class Dashboard extends Component {
 
                 <div className="dashboard-main-container">
                         <div className="dashboard-wishlist">
-                            <h1>Wish List</h1>
-
-                            <div className="books-container">
-
-                            </div>
+                            <h1>Book Shelf</h1>
+                            {
+                                this.state.books ? 
+                                    this.state.books.map(book => {
+                                       return ( 
+                                            <div key={book._id} className="dashboard-books-container">
+                                               <img src={book.book_image} alt="Book thumbnail" />
+                                               <h1>{book.book_title}</h1>
+                                            </div> 
+                                       )
+                                    }) : null
+                            }
+                            
 
                         </div>
 
@@ -46,7 +67,7 @@ class Dashboard extends Component {
 
                         <div className="dashboard-completed-books">
                             <h1>Finished Books</h1>
-                            
+
                             <div className="books-container">
                                 
                             </div>

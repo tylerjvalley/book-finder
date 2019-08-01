@@ -24,7 +24,7 @@ router.get('/in-progress', (req, res) => {
             console.log(err)
         } else {
             books.forEach(book => {
-                if (book.book_in_progress) {
+                if (book.book_in_progress === 'True') {
                     res.json(book)
                 }
             })
@@ -38,7 +38,7 @@ router.get('/completed-books', (req, res) => {
             console.log(err)
         } else {
             books.forEach(book => {
-                if (book.book_completed) {
+                if (book.book_completed === 'True') {
                     res.json(book)
                 }
             })
@@ -61,7 +61,7 @@ router.get('/:id', (req, res) => {
 
 */
 
-router.post('/add-to-my-books', (req, res) => {
+router.post('/add-book', (req, res) => {
     //add a book to the db
     let book = new Book(req.body);
     book.save()
@@ -78,9 +78,9 @@ router.post('/update/:id', (req, res) => {
         if (!book) {
             res.status(404).send('Data was not found')
         } else {
-            book.book_title = req.body.book_title;
             book.book_rating = req.body.book_rating;
             book.book_review = req.body.book_review;
+            book.book_in_progress = req.body.book_in_progress;
             book.book_completed = req.body.book_completed;
 
             book.save().then(book => {

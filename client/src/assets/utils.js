@@ -51,3 +51,26 @@ export const loginUser = userData => {
          })
 }
 */
+
+
+//add a book
+
+export const addBook = (book) => {
+    axios.post('http://localhost:5000/api/books/add-book', book)
+         .then(res => {
+             console.log('book added successfully')
+         })
+         .catch(err => {
+             console.log(err);
+         })
+}
+
+//get books
+
+export const getBooks = () => {
+    return axios.get('http://localhost:5000/api/books/my-books')
+         .then(res => {
+             return res.data;   
+         })
+         .catch(err => console.log(err));
+}
