@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Book = new Schema({
+
     book_title: {
         type: String
     },
@@ -12,6 +13,10 @@ let Book = new Schema({
 
     book_review: {
         type: String
+    },
+
+    book_in_progress: {
+        type: Boolean
     },
 
     book_completed: {

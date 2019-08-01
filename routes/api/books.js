@@ -1,8 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const jwt = require('jsonwebtoken');
+const keys = require('../../config/keys');
+
+
+
+
 const Book = require('../../models/Book');
 
-router.route('/').get((req, res) => {
+router.get('/my-books', (req, res) => {
     Book.find((err, books) => {
         if (err) {
             console.log(err)
@@ -12,7 +18,36 @@ router.route('/').get((req, res) => {
     });
 });
 
-router.route('/:id').get((req, res) => {
+router.get('/in-progress', (req, res) => {
+    Book.find((err, books) => {
+        if (err) {
+            console.log(err)
+        } else {
+            books.forEach(book => {
+                if (book.book_in_progress) {
+                    res.json(book)
+                }
+            })
+        }
+    })
+})
+
+router.get('/completed-books', (req, res) => {
+    Book.find((err, books) => {
+        if (err) {
+            console.log(err)
+        } else {
+            books.forEach(book => {
+                if (book.book_completed) {
+                    res.json(book)
+                }
+            })
+        }
+    })
+})
+
+/*
+router.get('/:id', (req, res) => {
     //retrieve a single book based on id
     let id = req.params.id;
     Book.findById(id, (err, book) => {
@@ -24,7 +59,9 @@ router.route('/:id').get((req, res) => {
     })
 });
 
-router.route('/add').post((req, res) => {
+*/
+
+router.post('/add-to-my-books', (req, res) => {
     //add a book to the db
     let book = new Book(req.body);
     book.save()
@@ -36,7 +73,7 @@ router.route('/add').post((req, res) => {
         })
 });
 
-router.route('/update/:id').post((req, res) => {
+router.post('/update/:id', (req, res) => {
     Book.findById(req.params.id, (err, book) => {
         if (!book) {
             res.status(404).send('Data was not found')
@@ -56,7 +93,7 @@ router.route('/update/:id').post((req, res) => {
     })
 });
 
-router.route('/delete/:id').delete((req, res) => {
+router.delete('/delete/:id', (req, res) => {
     Book.findByIdAndDelete(req.params.id)
         .then(book => {
             console.log('deleted successfully')

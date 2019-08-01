@@ -29,6 +29,7 @@ class Dashboard extends Component {
                 <div className="dashboard-main-container">
                         <div className="dashboard-wishlist">
                             <h1>Wish List</h1>
+
                             <div className="books-container">
 
                             </div>
@@ -37,6 +38,7 @@ class Dashboard extends Component {
 
                         <div className="dashboard-progress-books">
                             <h1>In Progress</h1>
+
                             <div className="books-container">
 
                             </div>
@@ -44,6 +46,7 @@ class Dashboard extends Component {
 
                         <div className="dashboard-completed-books">
                             <h1>Finished Books</h1>
+                            
                             <div className="books-container">
                                 
                             </div>
