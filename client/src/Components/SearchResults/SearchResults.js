@@ -60,6 +60,8 @@ const addBookHandler = (book) => {
     const addedBook = {
         book_title: book.title,
         book_image: book.imageLinks.thumbnail,
+        book_in_progress: false,
+        book_completed: false
     }
 
     addBook(addedBook);

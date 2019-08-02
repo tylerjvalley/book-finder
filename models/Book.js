@@ -22,11 +22,11 @@ let Book = new Schema({
     },
 
     book_in_progress: {
-        type: String
+        type: Boolean
     },
 
     book_completed: {
-        type: String
+        type: Boolean
     }
 })
 
