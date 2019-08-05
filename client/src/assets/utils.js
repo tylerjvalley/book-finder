@@ -65,6 +65,17 @@ export const addBook = (book) => {
          })
 }
 
+
+//delete book 
+export const deleteBook = (book) => {
+    axios.delete('http://localhost:5000/api/books/delete/' + book._id)
+        .then(res => {
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+}
 //get all books
 
 export const getBooks = () => {

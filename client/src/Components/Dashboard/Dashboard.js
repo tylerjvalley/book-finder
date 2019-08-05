@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { Link } from 'react-router-dom';
-import { getBooks } from '../../assets/utils';
+import { getBooks, deleteBook } from '../../assets/utils';
 import axios from 'axios';
 import './Dashboard.scss';
 
@@ -54,6 +56,11 @@ class Dashboard extends Component {
         window.location.reload(true);
     }
 
+    deleteBook = (book) => {
+        deleteBook(book);
+        window.location.reload(true);
+    }
+
     renderBookshelf = (books) => {
         let items = [];
         books.forEach(book => {
@@ -74,6 +81,9 @@ class Dashboard extends Component {
                         }}>
                             Google Books Link
                             </Button>
+                        <IconButton onClick={() => this.deleteBook(book)} aria-label="delete">
+                            <DeleteIcon style={{ color: 'white' }} />
+                        </IconButton>
 
                     </div>
                 )
@@ -104,6 +114,9 @@ class Dashboard extends Component {
                         }}>
                             Google Books Link
                             </Button>
+                        <IconButton onClick={() => this.deleteBook(book)} aria-label="delete">
+                            <DeleteIcon style={{ color: 'white' }} />
+                        </IconButton>
 
                     </div>
                 )
@@ -118,6 +131,7 @@ class Dashboard extends Component {
             if (book.book_completed) {
                 items.push(
                     <div key={book._id} className="dashboard-books-container">
+                        
                         <img src={book.book_image} alt="Book thumbnail" />
                         <h1>{book.book_title}</h1>
                         <Button variant="outlined" color="inherit" style={{
@@ -126,6 +140,9 @@ class Dashboard extends Component {
                         }}>
                             Google Books Link
                             </Button>
+                        <IconButton onClick={() => this.deleteBook(book)} aria-label="delete">
+                            <DeleteIcon style={{color: 'white'}}/>
+                        </IconButton>
 
                     </div>
                 )
