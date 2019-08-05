@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { getBooks } from '../../assets/utils';
+import axios from 'axios';
 import './Dashboard.scss';
 
 
@@ -19,17 +20,102 @@ class Dashboard extends Component {
         
     }
 
-    addToInProgress = (book) => {
-        book.book_in_progress = true;
-        console.log(book.book_in_progress);
+    
+
+    addToInProgress = (selectedBook) => {
+       
+      
+        axios.put('http://localhost:5000/api/books/update/' + selectedBook._id, {
+            book_in_progress: true
+        })
+        .then(res => {
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
+        window.location.reload(true);
+            
+            
     }
 
-    renderBooks = (books, type) => {
-        const items = [];
+    addToCompleted = (selectedBook) => {
+        axios.put('http://localhost:5000/api/books/update/' + selectedBook._id, {
+            book_completed: true
+        })
+        .then(res => {
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(err)
+        })
 
-        if (type === 'bookshelf') {
+        window.location.reload(true);
+    }
 
-            books.forEach(book => {
+    renderBookshelf = (books) => {
+        let items = [];
+        books.forEach(book => {
+            if (!book.book_in_progress && !book.book_completed) {
+                items.push(
+                    <div key={book._id} className="dashboard-books-container">
+                        <img src={book.book_image} alt="Book thumbnail" />
+                        <h1>{book.book_title}</h1>
+                        <Button onClick={() => this.addToInProgress(book)} variant="outlined" color="inherit" style={{
+                            border: '1px solid white',
+                            color: 'white',
+                        }}>
+                            Add to In Progress
+                            </Button>
+                        <Button variant="outlined" color="inherit" style={{
+                            border: '1px solid white',
+                            color: 'white',
+                        }}>
+                            Google Books Link
+                            </Button>
+
+                    </div>
+                )
+            }
+        })
+        return items;
+
+    }
+
+    renderInProgress = (books) => {
+        let items = [];
+
+        books.forEach(book => {
+            if (book.book_in_progress) {
+                items.push(
+                    <div key={book._id} className="dashboard-books-container">
+                        <img src={book.book_image} alt="Book thumbnail" />
+                        <h1>{book.book_title}</h1>
+                        <Button onClick={() => this.addToCompleted(book)} variant="outlined" color="inherit" style={{
+                            border: '1px solid white',
+                            color: 'white',
+                        }}>
+                            Add to Completed
+                            </Button>
+                        <Button variant="outlined" color="inherit" style={{
+                            border: '1px solid white',
+                            color: 'white',
+                        }}>
+                            Google Books Link
+                            </Button>
+
+                    </div>
+                )
+            }
+        })
+        return items;
+    }
+
+    renderCompleted = (books) => {
+        let items = [];
+        books.forEach(book => {
+            if (book.book_completed) {
                 items.push(
                     <div key={book._id} className="dashboard-books-container">
                         <img src={book.book_image} alt="Book thumbnail" />
@@ -38,16 +124,18 @@ class Dashboard extends Component {
                             border: '1px solid white',
                             color: 'white',
                         }}>
-                            Completed
-                        </Button>
+                            Google Books Link
+                            </Button>
 
                     </div>
                 )
-            })
-        }
-
+            }
+        })
         return items;
+
     }
+
+    
 
     render() {
 
@@ -74,16 +162,16 @@ class Dashboard extends Component {
                             <h1>Book Shelf</h1>
 
                             <div className="books-container">
-                                {this.renderBooks(this.state.books, 'bookshelf')}
+                                {this.renderBookshelf(this.state.books)}
                             </div>
-                            
+
                         </div>
 
                         <div className="dashboard-progress-books">
                             <h1>In Progress</h1>
 
                             <div className="books-container">
-                                {this.renderBooks(this.state.books, 'bookshelf')}
+                            {this.renderInProgress(this.state.books)}
                             </div>
 
                         </div>
@@ -92,7 +180,7 @@ class Dashboard extends Component {
                             <h1>Finished Books</h1>
 
                             <div className="books-container">
-                                {this.renderBooks(this.state.books, 'bookshelf')}   
+                                {this.renderCompleted(this.state.books)}   
                             </div>
                         </div>
                 </div>

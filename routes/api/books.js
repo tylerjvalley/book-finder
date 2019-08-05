@@ -18,35 +18,8 @@ router.get('/my-books', (req, res) => {
     });
 });
 
-router.get('/in-progress', (req, res) => {
-    Book.find((err, books) => {
-        if (err) {
-            console.log(err)
-        } else {
-            books.forEach(book => {
-                if (book.book_in_progress === 'True') {
-                    res.json(book)
-                }
-            })
-        }
-    })
-})
 
-router.get('/completed-books', (req, res) => {
-    Book.find((err, books) => {
-        if (err) {
-            console.log(err)
-        } else {
-            books.forEach(book => {
-                if (book.book_completed === 'True') {
-                    res.json(book)
-                }
-            })
-        }
-    })
-})
 
-/*
 router.get('/:id', (req, res) => {
     //retrieve a single book based on id
     let id = req.params.id;
@@ -59,7 +32,6 @@ router.get('/:id', (req, res) => {
     })
 });
 
-*/
 
 router.post('/add-book', (req, res) => {
     //add a book to the db
@@ -73,7 +45,7 @@ router.post('/add-book', (req, res) => {
         })
 });
 
-router.post('/update/:id', (req, res) => {
+router.put('/update/:id', (req, res) => {
     Book.findById(req.params.id, (err, book) => {
         if (!book) {
             res.status(404).send('Data was not found')

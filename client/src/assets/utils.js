@@ -65,7 +65,7 @@ export const addBook = (book) => {
          })
 }
 
-//get books
+//get all books
 
 export const getBooks = () => {
     return axios.get('http://localhost:5000/api/books/my-books')
@@ -74,3 +74,5 @@ export const getBooks = () => {
          })
          .catch(err => console.log(err));
 }
+
+
