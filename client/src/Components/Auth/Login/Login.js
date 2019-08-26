@@ -2,18 +2,57 @@ import React, { Component } from 'react';
 import Radium, { StyleRoot } from 'radium';
 import { fadeIn } from 'react-animations'
 import Button from '@material-ui/core/Button';
-import axios from 'axios';
+import { loginUser } from '../../../assets/utils';
 import './Login.scss';
+
+/*
+import { SET_CURRENT_USER, USER_LOADING } from "../actions/types";
+
+const isEmpty = require("is-empty");
+
+const initialState = {
+  isAuthenticated: false,
+  user: {},
+  loading: false
+};
+
+export default function(state = initialState, action) {
+  switch (action.type) {
+    case SET_CURRENT_USER:
+      return {
+        ...state,
+        isAuthenticated: !isEmpty(action.payload),
+        user: action.payload
+      };
+    case USER_LOADING:
+      return {
+        ...state,
+        loading: true
+      };
+    default:
+      return state;
+  }
+}
+*/
 
 class Login extends Component {
 
     state = {
         modalIsOpen: false,
+        isAuthenticated: false,
         username: '',
         password: '',
         errors: {},
 
     }
+
+    componentDidMount() {
+        if (this.state.isAuthenticated) {
+            this.props.history.push('/dashboard');
+        }
+    }
+
+    
 
     modalAction = action => {
         
@@ -40,25 +79,19 @@ class Login extends Component {
     }
 
     submitLogin = (e) => {
-        e.preventDefault();
+       e.preventDefault();
 
-        const userData = {
-            username: this.state.username,
-            password: this.state.password
-        }
+       const userData = {
+           username: this.state.username,
+           password: this.state.password
+       };
 
-        axios.post('/api/users/login', {
-            username: this.state.username,
-            password: this.state.password
-        })
-        .then(res => {
-            console.log(res);
-        })
-        .catch(err => {
-            console.log(err)
-        })
-        
-        console.log(userData);
+       loginUser(userData);
+
+       this.setState({isAuthenticated: true});
+                
+
+       
     }
 
 

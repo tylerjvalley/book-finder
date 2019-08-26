@@ -1,25 +1,6 @@
 import axios from 'axios';
-//import jwt_decode from "jwt-decode";
+import jwt_decode from 'jwt-decode';
 
-/*
-//authorization token
-const setAuthToken = token => {
-    if (token) {
-        //Apply auth token to every request if logged in
-        axios.defaults.headers.common['Authorization'] = token;
-    } else {
-        //Delete auth header
-        delete axios.defaults.headers.common['Authorization'];
-    }
-};
-
-
-
-const setCurrentUser = user => {
-    
-}
-
-*/
 
 //sign up
 export const registerUser = (userData, history) => {
@@ -32,25 +13,52 @@ export const registerUser = (userData, history) => {
 }
 
 
-//login
-/*
-export const loginUser = userData => {
-    axios.post('/api/users/login', userData)
-         .then(res => {
-             //Save to local storage
+//set auth token
+const setAuthToken = token => {
+    if (token) {
+        //Apply authorization token to every request if logged in
+        axios.defaults.headers.common["Authorization"] = token;
+    } else {
+        //Delete auth header
+        delete axios.defaults.headers.common["Authorization"];
+    }
+}
 
-             //set token to localStorage
+//login
+export const loginUser = userData => {
+    axios.post('http://localhost:5000/api/users/login', userData)
+         .then(res => {
+                console.log(res); 
+            /*
+             //save to local storage
+
+             //set token to local storage 
+
              const { token } = res.data;
              localStorage.setItem('jwtToken', token);
              //set token to Auth header
              setAuthToken(token);
-             //decode token to get user data
              const decoded = jwt_decode(token);
              //set current user
-             
+             return decoded*/
+         })
+         .catch(err => {
+             console.log(err)
          })
 }
-*/
+
+
+
+//log out
+export const logoutUser = () => {
+    //remove token from local storage
+    localStorage.removeItem('jwtToken');
+    //Remove auth header for future requests
+    setAuthToken(false);
+    //set current user to empty object
+    return {};
+}
+
 
 
 //add a book
@@ -85,5 +93,6 @@ export const getBooks = () => {
          })
          .catch(err => console.log(err));
 }
+
 
 

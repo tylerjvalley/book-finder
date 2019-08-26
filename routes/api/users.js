@@ -1,16 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken');
-const keys = require('../../config/keys');
-
+ 
 
 // Load input validation
 const validateSignUpInput = require('../../validation/signUp');
 const validateLoginInput = require('../../validation/login');
 
-// Load User model
+// Load User model and 
 const User = require('../../models/User');
+const UserSession = require('../../models/UserSession');
 
 router.post('/sign-up', (req, res) => {
     //Form Validation
@@ -47,11 +46,13 @@ router.post('/sign-up', (req, res) => {
     });
 });
 
+ 
+
 
 
 router.post('/login', (req, res) => {
     //Form Validation
-
+    
     const { errors, isValid } = validateLoginInput(req.body)
 
     //check validation
@@ -59,45 +60,48 @@ router.post('/login', (req, res) => {
         return res.status(400).json(errors);
     }
 
-    const username = req.body.username;
-    const password = req.body.password;
+    User.findOne({ username: req.body.username }).then(user => {
 
-    User.findOne({ username }).then(user => {
-        //check if user exists
-        if (!user) {
+         //find User 
+        if (user) {
+
+           //compare password
+           if (bcrypt.compareSync(req.body.password, user.password)) {
+               //passwords match 
+               const userSession = new UserSession();
+
+               userSession.userId = user._id;
+               userSession.save((err, doc) => {
+                   if (err) {
+                       return res.send({
+                           success: false,
+                           message: 'Error: server error'
+                       });
+                   }
+
+                   return res.send({
+                       success: true,
+                       message: 'Valid login',
+                       token: doc._id
+                   });
+               });
+           } else {
+               return res.status(400).json({ password: 'Password incorrect' })
+           }
+        } else {
             return res.status(400).json({ username: 'Username not found' })
         }
-
-        //check password
-        bcrypt.compare(password, user.password).then(isMatch => {
-            if (isMatch) {
-                //User matched
-                //create JWT payload
-                const payload = {
-                    id: user.id,
-                    name: user.name
-                };
-
-                //Sign token
-                jwt.sign(
-                    payload,
-                    keys.secretOrKey,
-                    {
-                        expiresIn: 31556926 // 1 year in seconds
-                    },
-                    (err, token) => {
-                        res.json({
-                            success: true,
-                            token: "Bearer " + token
-                        });
-                    }
-                );
-            } else {
-                return res.status(400).json({ passwordincorrect: "Password Incorrect" });
-            }
-        });
-
     });
+   
+    
 });
+
+/*
+       
+       */
+
+
+
+
 
 module.exports = router;

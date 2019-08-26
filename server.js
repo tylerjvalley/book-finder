@@ -17,11 +17,12 @@ const cors = require('cors');
 app.use(cors());
 app.use(
     bodyParser.urlencoded({
-        extended: false
+        extended: true
     })
 );
 
 app.use(bodyParser.json());
+
 
 //db config
 const db = require('./config/keys').mongoURI;
@@ -29,7 +30,7 @@ const db = require('./config/keys').mongoURI;
 //connect to mongoose
 mongoose.connect(db, { useNewUrlParser: true } )
         .then(() => console.log('MongoDb successfully connected'))
-        .catch(() => console.log(err));
+        .catch((err) => console.log('MongoDB error:', err));
 
 // Passport middleware
 app.use(passport.initialize());

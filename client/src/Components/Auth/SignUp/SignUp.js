@@ -61,7 +61,10 @@ class SignUp extends Component {
             password2: this.state.password2,
         }
 
+        this.setState({isLoading: true})
+
         registerUser(newUser, createBrowserHistory());
+        window.location.reload();
 
        
     }
@@ -92,8 +95,10 @@ class SignUp extends Component {
 
         const { errors } = this.state;
 
+        
         return (
             <>
+                
                 <Button variant="outlined" color="inherit" onClick={() => this.modalAction('show')} style={styles.loginButtons}>
                     Sign Up
                 </Button>
@@ -116,8 +121,11 @@ class SignUp extends Component {
                         </StyleRoot>
                     </div> : null
                 }
+                
             </>
-        )
+        );
+        
+        
     }
 }
 
