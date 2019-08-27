@@ -11,6 +11,7 @@ const validateLoginInput = require('../../validation/login');
 const User = require('../../models/User');
 const UserSession = require('../../models/UserSession');
 
+//Sign up route
 router.post('/sign-up', (req, res) => {
     //Form Validation
 
@@ -49,7 +50,7 @@ router.post('/sign-up', (req, res) => {
  
 
 
-
+//Login route
 router.post('/login', (req, res) => {
     //Form Validation
     
@@ -75,7 +76,7 @@ router.post('/login', (req, res) => {
                    if (err) {
                        return res.send({
                            success: false,
-                           message: 'Error: server error'
+                           message: 'Error: server error' 
                        });
                    }
 
@@ -96,9 +97,75 @@ router.post('/login', (req, res) => {
     
 });
 
-/*
-       
-       */
+
+//verify token
+router.get('/verify', (req, res) => {
+    //get the token
+    const { query } = req;
+    const { token } = query;
+
+    // ?token=test
+
+    //verify the token is one of a kind and is not deleted
+
+    UserSession.find({
+        _id: token,
+        isDeleted: false
+    }, (err, sessions) => {
+        if (err) {
+            return res.send({
+                success: false,
+                message: 'Error: Server error'
+            })
+        }
+
+        if (sessions.length != 1) {
+            return res.send({
+                success: false,
+                message: 'Error: Invalid'
+            })
+        } else {
+            return res.send({
+                success: true,
+                message: 'Good'
+            })
+        }
+    })
+})
+
+
+//Logout route
+router.post('/logout', (req, res) => {
+    //get the token
+    const { query } = req;
+    const { token } = query;
+
+    // ?token=test
+
+    //verify the token is one of a kind and is not deleted
+
+    UserSession.findOneAndUpdate({
+        _id: token,
+        isDeleted: false
+    }, {
+        $set: {
+            isDeleted: true
+        }
+    }, null, (err, sessions) => {
+        if (err) {
+            return res.send({
+                success: false,
+                message: 'Error: Server error'
+            })
+        }
+        
+        return res.send({
+            success: true,
+            message: 'Good'
+        })
+        
+    })
+});
 
 
 
