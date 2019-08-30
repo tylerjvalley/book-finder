@@ -1,15 +1,33 @@
 import axios from 'axios';
 
+//get from storage
+export const getFromStorage = key => {
+    if (!key) {
+        return null;
+    }
 
+    try {
+        const valueStr = localStorage.getItem(key);
+        if (valueStr) {
+            return JSON.parse(valueStr);
+        }
+        return null;
+    } catch(err) {
+        return null;
+    }
+}
 
-//sign up
-export const registerUser = (userData, history) => {
-    axios.post('http://localhost:5000/api/users/sign-up', userData)
-         .then(res => {
-             history.push('/dashboard');
-             window.location.reload(); //refresh page
-            }) //redirect to dashboard on success
-         .catch(err => console.log(err))
+//set in storage
+export const setInStorage = (key, obj) => {
+     if (!key) {
+         console.error('Error: key is missing')
+     }
+
+     try {
+         localStorage.setItem(key, JSON.stringify(obj));
+     } catch (err) {
+         console.error(err);
+     }
 }
 
 
@@ -23,32 +41,7 @@ const setAuthToken = token => {
         delete axios.defaults.headers.common["Authorization"];
     }
 }
-
-//login
-export const loginUser = userData => {
-    axios.post('http://localhost:5000/api/users/login', userData)
-         .then(res => {
-                console.log(res); 
-            /*
-             //save to local storage
-
-             //set token to local storage 
-
-             const { token } = res.data;
-             localStorage.setItem('jwtToken', token);
-             //set token to Auth header
-             setAuthToken(token);
-             const decoded = jwt_decode(token);
-             //set current user
-             return decoded*/
-         })
-         .catch(err => {
-             console.log(err)
-         })
-}
-
-
-
+ 
 //log out
 export const logoutUser = () => {
     //remove token from local storage

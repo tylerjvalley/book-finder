@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Radium, { StyleRoot } from 'radium';
 import { fadeIn } from 'react-animations'
 import Button from '@material-ui/core/Button';
-import { registerUser } from '../../../assets/utils';
-import { createBrowserHistory } from 'history';
+import axios from 'axios';
 import '../Login/Login.scss';
 
 
@@ -11,11 +10,12 @@ class SignUp extends Component {
 
     state = {
         modalIsOpen: false,
+        isLoading: false,
+        signUpError: '',
         username: '',
         firstName: '',
         password: '',
         password2: '',
-        errors: {},
 
     }
 
@@ -52,7 +52,9 @@ class SignUp extends Component {
     }
 
 
-    submitSignUp = (e) => {        
+    submitSignUp = (e) => {    
+        
+        this.setState({ isLoading: true });
 
         const newUser = {
             username: this.state.username,
@@ -63,8 +65,22 @@ class SignUp extends Component {
 
         this.setState({isLoading: true})
 
-        registerUser(newUser, createBrowserHistory());
-        window.location.reload();
+       
+        axios.post('http://localhost:5000/api/users/sign-up', newUser)
+            .then(res => {
+                this.setState({
+                    signUpError: 'Successfully Signed In',
+                    isLoading: false
+                })
+            }) //redirect to dashboard on success
+            .catch(err => {
+                console.log(err.response.data)
+                this.setState({
+                    signUpError: err.response.data,
+                    isLoading: false
+                })
+                
+            })
 
        
     }
@@ -91,17 +107,33 @@ class SignUp extends Component {
             }
         }
 
+        let loading, errors;
 
+        if (this.state.isLoading) {
+            loading = (<div><p>Loading...</p></div>);
+        } else {
+            loading = (<Button variant="outlined" color="inherit" onClick={() => this.modalAction('show')} style={styles.loginButtons}>
+                Sign Up
+                </Button>);
+        }
 
-        const { errors } = this.state;
+        if (this.state.signUpError) {
+            errors = Object.values(this.state.signUpError);
+            errors.map(error => {
+                return (<p>{error}</p>)
+            })
+          
+        } else {
+            errors = null;
+        }
+
+        
 
         
         return (
             <>
-                
-                <Button variant="outlined" color="inherit" onClick={() => this.modalAction('show')} style={styles.loginButtons}>
-                    Sign Up
-                </Button>
+                {errors}
+                {loading}
                 
                 {
                     this.state.modalIsOpen ? <div className="LoginModalWrapper">
@@ -109,10 +141,10 @@ class SignUp extends Component {
                             <div className="LoginModal" style={styles.fadeIn}>
                                 <h4 className="loginExit" onClick={() => this.modalAction('hide')}>X</h4>
                                 <div className="LogInFields">
-                                    <input type="text" name="username" error={errors.username} onChange={(e) => this.signUpInputChange(e, 'username')} placeholder="Username..." />
-                                    <input type="text" name="firstName" error={errors.firstName} onChange={(e) => this.signUpInputChange(e, 'firstName')} placeholder="First Name..." />
-                                    <input type="password" name="password" error={errors.password} onChange={(e) => this.signUpInputChange(e, 'password')} placeholder="Password..." />
-                                    <input type="password" name="confirmPassword" error={errors.password2} onChange={(e) => this.signUpInputChange(e, 'confirmPass')} placeholder="Confirm Password..." />
+                                    <input type="text" name="username" onChange={(e) => this.signUpInputChange(e, 'username')} placeholder="Username..." />
+                                    <input type="text" name="firstName" onChange={(e) => this.signUpInputChange(e, 'firstName')} placeholder="First Name..." />
+                                    <input type="password" name="password" onChange={(e) => this.signUpInputChange(e, 'password')} placeholder="Password..." />
+                                    <input type="password" name="confirmPassword" onChange={(e) => this.signUpInputChange(e, 'confirmPass')} placeholder="Confirm Password..." />
                                 </div>
                                 <div className="LoginBtnModalWrapper">
                                     <button className="LoginBtnModal" onClick={this.submitSignUp}>Sign Up</button>

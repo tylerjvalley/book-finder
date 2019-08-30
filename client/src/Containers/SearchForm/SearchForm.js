@@ -1,19 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Login from '../../Components/Auth/Login/Login';
 import SignUp from '../../Components/Auth/SignUp/SignUp';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
-import { makeStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
+import axios from 'axios';
+import { getFromStorage } from '../../assets/utils';
 
-
-
-
-
-
-
+/*
   
 const useStyles = makeStyles({
 
@@ -83,36 +79,137 @@ const useStyles = makeStyles({
 
     
 });
+*/
 
-function SearchForm(props) {
-    const classes = useStyles();
+class SearchForm extends Component {
+   
+    state = {
+        token: '', // is signed in
+        isLoading: false
+    }
+
+    componentDidMount() {
+        const obj = getFromStorage('book_finder');
+
+        if (obj && obj.token) {
+            const token = obj.token;
+            //verify token
+            axios.get(`http://localhost:5000/api/users/verify?token=${token}`)
+                .then(res => {
+                    console.log(res)
+                    if (res) {
+                        this.setState({
+                            token: token,
+                            isLoading: false
+                        });
+                    } else {
+                        this.setState({
+                            isLoading: false,
+                        })
+                    }
+                })
+                .catch(err => {
+                    this.setState({ isLoading: false })
+                })
+        }
+    }
+
+    logout = () => {
+
+        this.setState({ isLoading: true })
+
+        const obj = getFromStorage('book_finder');
+
+        if (obj && obj.token) {
+            const token = obj.token;
+
+            axios.post(`http://localhost:5000/api/users/logout?token=${token}`)
+                .then(res => {
+                    localStorage.removeItem('book_finder')
+                    this.setState({
+                        token: '',
+                        isLoading: false
+                    })
+                })
+                .catch(err => {
+                    this.setState({
+                        isLoading: false
+                    })
+                })
+        } else {
+            this.setState({ isLoading: false })
+        }
+    }
 
 
-    return (<>
-            <div className={classes.top}>
-                <div className={classes.titleContainer}>
-                    <h1 className={classes.title}>Book Finder</h1>
-                </div>
+    render() {
 
-                <div className={classes.buttonsContainer}>
+        const styles = {
+            loginButtons: {
+                border: '1px solid white',
+                color: 'white',
+                margin: '1em'
+            }
+        }
+
+        let buttons;
+        const { token } = this.state;
+
+        if (!token) {
+            buttons = (
+                <div>
                     <Login />
-                    <SignUp />
+                    <SignUp />    
                 </div>
-            </div>
-           
+            )
+        } else {
+            buttons = (
+                <div>
+                    <Button variant="outlined" color="inherit" onClick={() => this.logout()} style={styles.loginButtons}>
+                        Logout
+                    </Button>
+                    <Button variant="outlined" color="inherit" onClick={() => this.modalAction('show')} style={styles.loginButtons}>
+                        Dashboard
+                    </Button>
+                </div>
+            )
+        }
 
-            <FormControl className={classes.form}>
-               
-                <InputLabel className={classes.label}>Search</InputLabel>
-                <Input type="text"
-                        onChange={props.search}
-                        className={classes.search}></Input>
-                <Button className={classes.button} onClick={props.submit}><SearchIcon className={classes.icon}/></Button>
+        let loading;
 
-            </FormControl>
+        if (this.state.isLoading) {
+            loading = (<p>Loading...</p>)
+        } else {
+            loading = null;
+        }
+
+
+        return (<>
+                <div>
+                    <div>
+                        {loading}
+                        <h1>Book Finder</h1>
+                    </div>
+
+                    <div>
+                        {buttons}
+                    </div>
+                </div>
             
-            </>
-            );
+
+                <FormControl>
+                
+                    <InputLabel>Search</InputLabel>
+                    <Input type="text"
+                            onChange={this.props.search}
+                            ></Input>
+                    <Button  onClick={this.props.submit}><SearchIcon/></Button>
+
+                </FormControl>
+                
+                </>
+                );
+    }
 }
 
 export default SearchForm;
