@@ -23,7 +23,7 @@ app.use(
 
 app.use(bodyParser.json());
 
-
+mongoose.set('useFindAndModify', false);
 //db config
 const db = require('./config/keys').mongoURI;
 

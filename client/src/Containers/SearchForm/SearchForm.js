@@ -6,6 +6,7 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { getFromStorage } from '../../assets/utils';
 
@@ -96,7 +97,6 @@ class SearchForm extends Component {
             //verify token
             axios.get(`http://localhost:5000/api/users/verify?token=${token}`)
                 .then(res => {
-                    console.log(res)
                     if (res) {
                         this.setState({
                             token: token,
@@ -168,9 +168,11 @@ class SearchForm extends Component {
                     <Button variant="outlined" color="inherit" onClick={() => this.logout()} style={styles.loginButtons}>
                         Logout
                     </Button>
-                    <Button variant="outlined" color="inherit" onClick={() => this.modalAction('show')} style={styles.loginButtons}>
-                        Dashboard
-                    </Button>
+                    <Link to="/dashboard">
+                        <Button variant="outlined" color="inherit" style={styles.loginButtons}>
+                            Dashboard
+                        </Button>
+                    </Link>
                 </div>
             )
         }

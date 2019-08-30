@@ -140,8 +140,6 @@ router.post('/logout', (req, res) => {
     const { query } = req;
     const { token } = query;
 
-    // ?token=test
-
     //verify the token is one of a kind and is not deleted
 
     UserSession.findOneAndUpdate({
