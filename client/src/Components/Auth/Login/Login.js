@@ -7,6 +7,7 @@ import './Login.scss';
 import axios from 'axios';
 
 
+
 class Login extends Component {
 
     state = {
@@ -90,7 +91,7 @@ class Login extends Component {
             loginButtons: {
                 border: '1px solid white',
                 color: 'white',
-                margin: '1em'
+                margin: '1em',
             }
         }
 

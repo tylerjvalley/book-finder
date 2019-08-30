@@ -10,77 +10,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { getFromStorage } from '../../assets/utils';
 
-/*
-  
-const useStyles = makeStyles({
-
-    top: {
-        width: '100%',
-        background: '#355C7D', 
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-
-    titleContainer: {
-        margin: 'auto',
-    },
-
-    title: {
-        color: 'white',
-        fontSize: '45px',
-        fontFamily: 'DM Serif Display',
-        
-    },
-
-    buttonsContainer: {
-        display: 'flex',
-        flexWrap: 'nowrap',
-    },
-
-    form: {
-        background: '#355C7D', 
-        width: '100%',
-    },
-    
-    search: {
-        width: '25%',
-        margin: '2em auto',
-        border: 0,
-        background: 'white',
-        color: 'black',
-        borderRadius: 3,
-        height: 48,
-        padding: '0 30px',
-    },
-
-    label: {
-        marginLeft: '48%',
-        marginTop: '-0.2%',
-        zIndex: '2',
-    },
-
-    
-
-    button: {
-        width: '15%',
-        margin: '1em auto',
-        border: '1px solid #2B4570',
-        '&:hover': {
-            border: '1px solid white'
-        }
-    },
-
-    icon: {
-        '&:hover': {
-            color: 'white'
-        }
-    }
-
-    
-});
-*/
 
 class SearchForm extends Component {
    
@@ -145,10 +74,73 @@ class SearchForm extends Component {
     render() {
 
         const styles = {
-            loginButtons: {
+
+            buttons: {
                 border: '1px solid white',
                 color: 'white',
                 margin: '1em'
+            },
+
+            top: {
+                width: '100%',
+                background: '#355C7D',
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+            },
+
+            titleContainer: {
+                marginLeft: '41%',
+            },
+
+            title: {
+                color: 'white',
+                fontSize: '45px',
+                fontFamily: 'DM Serif Display',
+
+            },
+
+            buttonsContainer: {
+                display: 'flex',
+                flexWrap: 'nowrap',
+            },
+
+            form: {
+                background: '#355C7D',
+                width: '100%',
+            },
+
+            search: {
+                width: '25%',
+                margin: '2em auto',
+                border: 0,
+                background: 'white',
+                color: 'black',
+                borderRadius: 3,
+                height: 48,
+                padding: '0 30px',
+            },
+
+            label: {
+                marginLeft: '48%',
+                marginTop: '1%',
+                zIndex: '2',
+            },
+
+            searchButton: {
+                width: '15%',
+                margin: '1em auto',
+                border: '1px solid #2B4570',
+                '&:hover': {
+                    border: '1px solid white'
+                }
+            },
+
+            icon: {
+                '&:hover': {
+                    color: 'white'
+                }
             }
         }
 
@@ -165,11 +157,11 @@ class SearchForm extends Component {
         } else {
             buttons = (
                 <div>
-                    <Button variant="outlined" color="inherit" onClick={() => this.logout()} style={styles.loginButtons}>
+                    <Button variant="outlined" color="inherit" onClick={() => this.logout()} style={styles.buttons}>
                         Logout
                     </Button>
                     <Link to="/dashboard">
-                        <Button variant="outlined" color="inherit" style={styles.loginButtons}>
+                        <Button variant="outlined" color="inherit" style={styles.buttons}>
                             Dashboard
                         </Button>
                     </Link>
@@ -187,25 +179,26 @@ class SearchForm extends Component {
 
 
         return (<>
-                <div>
-                    <div>
+                <div style={styles.top}>
+                    <div style={styles.titleContainer}>
                         {loading}
-                        <h1>Book Finder</h1>
+                        <h1 style={styles.title}>Book Finder</h1>
                     </div>
 
-                    <div>
+                    <div style={styles.buttonsContainer}>
                         {buttons}
                     </div>
                 </div>
             
 
-                <FormControl>
+                <FormControl style={styles.form}>
                 
-                    <InputLabel>Search</InputLabel>
+                    <InputLabel style={styles.label}>Search</InputLabel>
                     <Input type="text"
+                            style={styles.search}
                             onChange={this.props.search}
                             ></Input>
-                    <Button  onClick={this.props.submit}><SearchIcon/></Button>
+                <Button style={styles.searchButton} onClick={this.props.submit}><SearchIcon style={styles.icon}/></Button>
 
                 </FormControl>
                 
