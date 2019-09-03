@@ -83,7 +83,8 @@ router.post('/login', (req, res) => {
                    return res.send({
                        success: true,
                        message: 'Valid login',
-                       token: doc._id
+                       token: doc._id,
+                       id: doc.userId
                    });
                });
            } else {
@@ -127,12 +128,26 @@ router.get('/verify', (req, res) => {
         } else {
             return res.send({
                 success: true,
-                message: 'Good'
+                message: 'Good',
+                id: sessions   
             })
         }
     })
 })
 
+//get user
+
+router.get('/:id', (req, res) => {
+    let id = req.params.id;
+
+    User.findById(id, (err, user) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(user);
+        }
+    })
+})
 
 //Logout route
 router.post('/logout', (req, res) => {

@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let Book = new Schema({
+let BookSchema = new Schema({
 
+    userId: {
+        type: String,
+        required: true
+    }, 
+    
     book_title: {
         type: String,
         required: true
@@ -32,4 +37,4 @@ let Book = new Schema({
 
 
 
-module.exports = mongoose.model('Book', Book);
+module.exports = mongoose.model('Book', BookSchema);

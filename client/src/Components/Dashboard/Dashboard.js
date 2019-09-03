@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { Link } from 'react-router-dom';
-import { getBooks, deleteBook } from '../../assets/utils';
+import { getBooks, getFromStorage, deleteBook } from '../../assets/utils';
 import axios from 'axios';
 import './Dashboard.scss';
 
@@ -12,13 +12,42 @@ class Dashboard extends Component {
 
     state = {
         books: [],
+        currentUser: '',
     }
 
     componentDidMount() {
+
+      const token = getFromStorage('book_finder').token;
+
+      axios.get(`http://localhost:5000/api/users/verify?token=${token}`)
+           .then(res => {
+               const loggedInUser = res.data.id[0].userId;
+        
+               getBooks().then(res => {
+                   const validBooks = [];
+                   res.forEach(book => {
+                       if (book.userId === loggedInUser) {
+                            validBooks.push(book);
+                            axios.get(`http://localhost:5000/api/users/${loggedInUser}`)
+                                 .then(res => {
+                                     this.setState({ currentUser: res.data.firstName })
+                                 })
+                                 .catch(err => {
+                                     console.log(err)
+                                 })
+                       } 
+                   })
+                   this.setState({ books: validBooks } );
+               })  
+               .catch(err => {
+                   console.log(err)
+               })
+           })
+           .catch(err => {
+               console.log(err)
+           })
        
-       getBooks().then(res => {
-            this.setState({ books: res }, () => console.log(this.state.books));
-       })  
+       
         
     }
 
@@ -160,7 +189,7 @@ class Dashboard extends Component {
             <>
                 <div className="dashboard-top">
                     <div className="dashboard-title-container">
-                        <h1 className="dashboard-title">Dashboard</h1>
+                        <h1 className="dashboard-title">{this.state.currentUser}'s Dashboard</h1>
                     </div>
                     <div className="dashboard-button-container">
                         <Link to="/"><Button variant="outlined" color="inherit" style={{

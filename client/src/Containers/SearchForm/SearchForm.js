@@ -15,7 +15,8 @@ class SearchForm extends Component {
    
     state = {
         token: '', // is signed in
-        isLoading: false
+        isLoading: false,
+        currentUser: '',
     }
 
     componentDidMount() {
@@ -23,6 +24,7 @@ class SearchForm extends Component {
 
         if (obj && obj.token) {
             const token = obj.token;
+
             //verify token
             axios.get(`http://localhost:5000/api/users/verify?token=${token}`)
                 .then(res => {
@@ -31,6 +33,16 @@ class SearchForm extends Component {
                             token: token,
                             isLoading: false
                         });
+
+                        //get current user by id
+                        axios.get(`http://localhost:5000/api/users/${res.data.id[0].userId}`)
+                             .then(user => {             
+                                 this.setState({ currentUser: user.data.firstName });
+                             })
+                             .catch(err => {
+                                 console.log(err);
+                             })
+
                     } else {
                         this.setState({
                             isLoading: false,
@@ -169,7 +181,7 @@ class SearchForm extends Component {
             )
         }
 
-        let loading;
+        let loading, title;
 
         if (this.state.isLoading) {
             loading = (<p>Loading...</p>)
@@ -177,12 +189,21 @@ class SearchForm extends Component {
             loading = null;
         }
 
+        
+        if (this.state.currentUser) {
+            title = (<h1 style={styles.title}>Hello {this.state.currentUser}!</h1>)
+        } else {
+            title = (<h1 style={styles.title}>Book Finder</h1>)
+        }
+
+        
+
 
         return (<>
                 <div style={styles.top}>
                     <div style={styles.titleContainer}>
                         {loading}
-                        <h1 style={styles.title}>Book Finder</h1>
+                        {title}
                     </div>
 
                     <div style={styles.buttonsContainer}>
