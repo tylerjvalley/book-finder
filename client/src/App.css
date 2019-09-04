@@ -9,3 +9,8 @@ body {
 .search-item h1 {
   color: white;
 }
+
+.text-field label {
+  position: relative;
+  margin: auto;
+}

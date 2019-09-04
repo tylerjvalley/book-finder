@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Login from '../../Components/Auth/Login/Login';
 import SignUp from '../../Components/Auth/SignUp/SignUp';
 import FormControl from '@material-ui/core/FormControl';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { getFromStorage } from '../../assets/utils';
+import '../../App.css';
 
 
 class SearchForm extends Component {
@@ -103,7 +103,7 @@ class SearchForm extends Component {
             },
 
             titleContainer: {
-                marginLeft: '41%',
+                margin: 'auto'
             },
 
             title: {
@@ -116,6 +116,8 @@ class SearchForm extends Component {
             buttonsContainer: {
                 display: 'flex',
                 flexWrap: 'nowrap',
+                background: '#355C7D',
+                border: '1px solid #355C7D'
             },
 
             form: {
@@ -124,14 +126,11 @@ class SearchForm extends Component {
             },
 
             search: {
-                width: '25%',
-                margin: '2em auto',
-                border: 0,
                 background: 'white',
-                color: 'black',
-                borderRadius: 3,
-                height: 48,
-                padding: '0 30px',
+                width: '30%',
+                height: '4em',
+                margin: 'auto',
+                borderRadius: '2%',
             },
 
             label: {
@@ -161,14 +160,14 @@ class SearchForm extends Component {
 
         if (!token) {
             buttons = (
-                <div>
+                <div style={{ margin: 'auto' }}>
                     <Login />
                     <SignUp />    
                 </div>
             )
         } else {
             buttons = (
-                <div>
+                <div style={{ margin: 'auto' }}>
                     <Button variant="outlined" color="inherit" onClick={() => this.logout()} style={styles.buttons}>
                         Logout
                     </Button>
@@ -205,21 +204,24 @@ class SearchForm extends Component {
                         {loading}
                         {title}
                     </div>
+                </div>
 
-                    <div style={styles.buttonsContainer}>
-                        {buttons}
-                    </div>
+                <div style={styles.buttonsContainer}>
+                    {buttons}
                 </div>
             
 
                 <FormControl style={styles.form}>
                 
-                    <InputLabel style={styles.label}>Search</InputLabel>
-                    <Input type="text"
-                            style={styles.search}
-                            onChange={this.props.search}
-                            ></Input>
-                <Button style={styles.searchButton} onClick={this.props.submit}><SearchIcon style={styles.icon}/></Button>
+            
+                <TextField type="text"
+                        label="Search"
+                        className="text-field"
+                        style={styles.search}
+                        onChange={this.props.search}
+                        />
+                                         
+                    <Button style={styles.searchButton} onClick={this.props.submit}><SearchIcon style={styles.icon}/></Button>
 
                 </FormControl>
                 
