@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+//for production
+export const baseUrl = process.env.baseUrl || 'http://localhost:5000';
+
+
 //get from storage
 export const getFromStorage = key => {
     if (!key) {
@@ -57,7 +61,7 @@ export const logoutUser = () => {
 //add a book
 
 export const addBook = (book) => {
-    axios.post('http://localhost:5000/api/books/add-book', book)
+    axios.post(`${baseUrl}/api/books/add-book`, book)
          .then(res => {
              console.log('book added successfully')
          })
@@ -69,7 +73,7 @@ export const addBook = (book) => {
 
 //delete book 
 export const deleteBook = (book) => {
-    axios.delete('http://localhost:5000/api/books/delete/' + book._id)
+    axios.delete(`${baseUrl}/api/books/delete/` + book._id)
         .then(res => {
             console.log(res)
         })
@@ -80,7 +84,7 @@ export const deleteBook = (book) => {
 //get all books
 
 export const getBooks = () => {
-    return axios.get('http://localhost:5000/api/books/my-books')
+    return axios.get(`${baseUrl}/api/books/my-books`)
          .then(res => {
              return res.data;   
          })
