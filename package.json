@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"cd client && npm start\"",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Tyler Valley",
   "license": "MIT",
@@ -13,7 +14,6 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
