@@ -47,6 +47,19 @@ app.use('/api/users', users);
 
 const port = process.env.PORT || 5000;
 
+// other imports 
+const path = require('path');
+
+// other app.use middleware
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
+
 app.listen(port, () => {
     console.log(`server started on port ${port}`);
 })
+
+
+
