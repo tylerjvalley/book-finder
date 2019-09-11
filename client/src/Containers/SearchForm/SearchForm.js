@@ -71,6 +71,8 @@ class SearchForm extends Component {
                         token: '',
                         isLoading: false
                     })
+
+                    window.location.reload();
                 })
                 .catch(err => {
                     this.setState({
@@ -110,6 +112,17 @@ class SearchForm extends Component {
                 color: 'white',
                 fontSize: '45px',
                 fontFamily: 'DM Serif Display',
+
+            },
+
+            loadingContainer: {
+                background: '#66ff66',
+                width: '100%',
+            },
+
+            loading: {
+                textAlign: 'center',
+                fontFamily: 'DM Serif Display'
 
             },
 
@@ -183,7 +196,7 @@ class SearchForm extends Component {
         let loading, title;
 
         if (this.state.isLoading) {
-            loading = (<p>Loading...</p>)
+            loading = (<div style={styles.loadingContainer}><p style={styles.loading}>Loading...</p></div>)
         } else {
             loading = null;
         }
@@ -200,8 +213,8 @@ class SearchForm extends Component {
 
         return (<>
                 <div style={styles.top}>
-                    <div style={styles.titleContainer}>
-                        {loading}
+                 {loading}
+                    <div style={styles.titleContainer}>   
                         {title}
                     </div>
                 </div>

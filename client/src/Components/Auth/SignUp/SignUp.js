@@ -104,23 +104,35 @@ class SignUp extends Component {
                 border: '1px solid white',
                 color: 'white',
                 margin: '1em'
-            }
+            },
+
+            messageContainer: {
+                background: '#66ff66',
+                width: '100%',
+            },
+
+            message: {
+                textAlign: 'center',
+                fontFamily: 'DM Serif Display'
+
+            },
+
         }
 
         let loading, errors;
 
         if (this.state.isLoading) {
-            loading = (<div><p>Loading...</p></div>);
-        } else {
-            loading = (<Button variant="outlined" color="inherit" onClick={() => this.modalAction('show')} style={styles.loginButtons}>
-                Sign Up
-                </Button>);
-        }
+            loading = (
+                <div style={styles.messageContainer}>
+                     <p style={styles.message}>Loading...</p>
+                </div>
+                );
+        } 
 
         if (this.state.signUpError) {
             errors = Object.values(this.state.signUpError);
             errors.map(error => {
-                return (<p>{error}</p>)
+                return ({error})
             })
           
         } else {
@@ -132,13 +144,18 @@ class SignUp extends Component {
         
         return (
             <>
-                {errors}
-                {loading}
                 
+                <Button variant="outlined" color="inherit" onClick={() => this.modalAction('show')} style={styles.loginButtons}>
+                    Sign Up
+                </Button>
                 {
                     this.state.modalIsOpen ? <div className="LoginModalWrapper">
                         <StyleRoot>
-                            <div className="LoginModal" style={styles.fadeIn}>
+                            <div className="SignUpModal" style={styles.fadeIn}>
+                                <div style={styles.messageContainer}>
+                                    <p style={styles.message}>{errors}</p>
+                                </div>
+                                {loading}
                                 <h4 className="loginExit" onClick={() => this.modalAction('hide')}>X</h4>
                                 <div className="LogInFields">
                                     <input type="text" name="username" onChange={(e) => this.signUpInputChange(e, 'username')} placeholder="Username..." />
@@ -147,7 +164,7 @@ class SignUp extends Component {
                                     <input type="password" name="confirmPassword" onChange={(e) => this.signUpInputChange(e, 'confirmPass')} placeholder="Confirm Password..." />
                                 </div>
                                 <div className="LoginBtnModalWrapper">
-                                    <button className="LoginBtnModal" onClick={this.submitSignUp}>Sign Up</button>
+                                    <button className="SignUpBtnModal" onClick={this.submitSignUp}>Sign Up</button>
                                 </div>
                             </div>
                         </StyleRoot>
