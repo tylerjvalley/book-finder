@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //for production
-export const baseUrl = process.env.baseUrl || 'http://localhost:5000';
+export const baseUrl = process.env.baseURL || 'http://localhost:5000';
 
 
 //get from storage
