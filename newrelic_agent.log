@@ -1,0 +1,170 @@
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:13.156Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:13.355Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:13.567Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:13.567Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:16.637Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:16.637Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BbhK8ei2NUQYACW8kRh5sqBdes-UAAgBAAAnIQEAACLzAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:16.637Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:16.644Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:17.646Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:05:17.877Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:06:17.650Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:06:18.003Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:07:17.651Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:07:17.878Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:08:17.654Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8947,"time":"2019-09-12T23:08:17.882Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:11.166Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:11.551Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:11.852Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:11.853Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:14.897Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:14.898Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID Bb9W6_mH93_lACW8kRh5sqBdetCEAAgBAAAnIQEAACMaAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:14.898Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:14.906Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:15.910Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:09:16.138Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:10:15.917Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":8986,"time":"2019-09-12T23:10:16.148Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:39.013Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:39.282Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:39.767Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:39.767Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:43.250Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:43.251Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BRjY5xmlnPdtACW8kRh5sqBdetDAAAgBAAAnIQEAACMuAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:43.251Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:43.258Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:44.259Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:10:44.468Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:11:44.263Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:11:44.582Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:12:44.267Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:12:44.607Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:13:44.274Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:13:44.512Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:14:44.278Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9006,"time":"2019-09-12T23:14:44.505Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:00.957Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:01.283Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:01.664Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:01.664Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:05.461Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:05.461Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BV0pKYmOWIIKACW8kRh5sqBdetHsAAgBAAAnIQEAACNDAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:05.461Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:05.468Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:06.471Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9027,"time":"2019-09-12T23:15:06.697Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:18.160Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:18.457Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:18.816Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:18.817Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:22.247Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:22.248Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BUd5DnflBJu4ACW8kRh5sqBdetHsAAgBAAAnIQEAACNPAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:22.248Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:22.255Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:23.257Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:15:23.491Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:16:23.261Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9039,"time":"2019-09-12T23:16:23.436Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:10.343Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:10.831Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:11.281Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:11.281Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:15.153Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:15.153Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BSA7s4yn_R_MACW8kRh5sqBdetJkAAgBAAAnIQEAACNfAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:15.153Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:15.162Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:16.164Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9055,"time":"2019-09-12T23:17:16.365Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:24.678Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:25.055Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:25.616Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:25.616Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:28.904Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:28.904Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BaYLeuewLXJGACW8kRh5sqBdetJkAAgBAAAnIQEAACNuAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:28.904Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:28.915Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:29.916Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9070,"time":"2019-09-12T23:17:30.131Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:37.913Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:38.304Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:38.752Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:38.753Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:42.529Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:42.529Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BUNHwbPSbHZiACW8kRh5sqBdetJkAAgBAAAnIQEAACN6AgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:42.529Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:42.539Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:43.541Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:17:43.770Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:18:43.543Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9082,"time":"2019-09-12T23:18:43.877Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:11.777Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:12.197Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:12.530Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:12.530Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:16.794Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:16.795Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BW1pbHKTtPClACW8kRh5sqBdetLcAAgBAAAnIQEAACOJAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:16.799Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:16.828Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:17.834Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9097,"time":"2019-09-12T23:19:18.146Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:00.084Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:00.427Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:00.832Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:00.832Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:05.998Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:05.999Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BWFpN5CMgCfDACW8kRh5sqBdetMYAAgBAAAnIQEAACOWAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:05.999Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:06.012Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:07.014Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9110,"time":"2019-09-12T23:20:07.320Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:52.806Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:53.172Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:53.540Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:53.540Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:57.918Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:57.918Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BeFBc8WITV2DACW8kRh5sqBdetMYAAgBAAAnIQEAACOlAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:57.918Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:57.927Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:58.931Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9125,"time":"2019-09-12T23:20:59.280Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:09.390Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:09.883Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:10.455Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:10.456Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:15.911Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:15.911Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BdTrEPeWqmh6ACW8kRh5sqBdetNUAAgBAAAnIQEAACOzAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:15.911Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:15.926Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:16.927Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9139,"time":"2019-09-12T23:21:17.273Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:41.520Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:41.754Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:42.282Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:42.282Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:45.706Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:45.706Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BdzqIebutAMvACW8kRh5sqBdetNUAAgBAAAnIQEAACPCAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:45.706Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:45.714Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:46.715Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9154,"time":"2019-09-12T23:21:46.928Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:06.120Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:06.278Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:06.486Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:06.486Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:08.697Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:08.697Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID Baf4eGSTLkL-ACW8kRh5sqBdetPMAAgBAAAnIQEAACPqAgQYeP20AwAGNS4xMS4wAApBcHBsZXMtTUJQAAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:08.697Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:08.705Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:09.708Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:23:09.966Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:24:09.717Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:24:09.929Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:25:09.723Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:25:09.949Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:26:09.725Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:26:09.939Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:27:09.728Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:27:09.939Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:28:09.732Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:28:09.967Z","msg":"Harvest finished."}

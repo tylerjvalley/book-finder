@@ -13,40 +13,58 @@ class Dashboard extends Component {
     state = {
         books: [],
         currentUser: '',
+        token: '',
     }
 
     componentDidMount() {
 
-      const token = getFromStorage('book_finder').token;
+        const obj = getFromStorage('book_finder');
 
-      axios.get(`/api/users/verify?token=${token}`)
-           .then(res => {
-               const loggedInUser = res.data.id[0].userId;
-        
-               getBooks().then(res => {
-                   const validBooks = [];
-                   res.forEach(book => {
-                       if (book.userId === loggedInUser) {
-                            validBooks.push(book);
-                            axios.get(`/api/users/${loggedInUser}`)
-                                 .then(res => {
-                                     this.setState({ currentUser: res.data.firstName })
-                                 })
-                                 .catch(err => {
-                                     console.log(err)
-                                 })
-                       } 
-                   })
-                   this.setState({ books: validBooks } );
-               })  
-               .catch(err => {
-                   console.log(err)
-               })
-           })
-           .catch(err => {
-               console.log(err)
-           })
-       
+        if (obj && obj.token) {
+            const token = obj.token;
+
+            //verify token
+            axios.get(`/api/users/verify?token=${token}`)
+                .then(res => {
+                    if (res) {
+                        this.setState({
+                            token: token,
+                        });
+
+                        //get current user by id
+                        axios.get(`/api/users/${res.data.id[0].userId}`)
+                            .then(user => {
+                                this.setState({ currentUser: user.data.firstName });
+                                getBooks().then(res => {
+                                    const validBooks = [];
+                                    res.forEach(book => {
+                                        if (book.userId === user.data._id) {
+                                            validBooks.push(book);
+                                        }
+                                    })
+                                    this.setState({ books: validBooks });
+                                })
+                                    .catch(err => {
+                                        console.log(err)
+                                    })
+                            })
+                            .catch(err => {
+                                console.log(err);
+                            })
+
+                    } else {
+                        this.setState({
+                            isLoading: false,
+                        })
+                    }
+                })
+                .catch(err => {
+                    this.setState({ isLoading: false })
+                })
+        }
+
+
+      
        
         
     }

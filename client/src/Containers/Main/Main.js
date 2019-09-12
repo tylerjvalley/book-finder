@@ -32,7 +32,7 @@ class Main extends Component {
 
             //check for valid search based on if the searched book has authors.
             if (isValid) {
-                this.setState({ books: res.data.items }, () => console.log(this.state.books))
+                this.setState({ books: res.data.items })
             } else {
                 alert('no results found');
             }
