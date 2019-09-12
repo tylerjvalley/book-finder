@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
-import { addBook, getFromStorage, baseUrl } from '../../assets/utils';
+import { addBook, getFromStorage } from '../../assets/utils';
 import axios from 'axios';
 
 
@@ -62,7 +62,7 @@ const useStyles = makeStyles({
 const addBookHandler = (book) => {
     
     let user = getFromStorage('book_finder')
-    axios.get(`${baseUrl}/api/users/verify?token=${user.token}`)
+    axios.get(`/api/users/verify?token=${user.token}`)
          .then(res => {
              const addedBook = {
                  userId: res.data.id[0].userId,
