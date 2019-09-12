@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Radium, { StyleRoot } from 'radium';
 import { fadeIn } from 'react-animations'
 import Button from '@material-ui/core/Button';
-import { setInStorage, baseUrl } from '../../../assets/utils';
+import { setInStorage } from '../../../assets/utils';
 import './Login.scss';
 import axios from 'axios';
 
@@ -54,7 +54,7 @@ class Login extends Component {
            password: this.state.password
        }
 
-        axios.post(`${baseUrl}/api/users/login`, userData)
+        axios.post(`/api/users/login`, userData)
             .then(res => {
                 setInStorage('book_finder', { token: res.data.token });
                 this.setState({

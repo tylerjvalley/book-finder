@@ -3,7 +3,6 @@ import Radium, { StyleRoot } from 'radium';
 import { fadeIn } from 'react-animations'
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
-import { baseUrl } from '../../../assets/utils';
 import '../Login/Login.scss';
 
 
@@ -67,7 +66,7 @@ class SignUp extends Component {
         this.setState({isLoading: true})
 
        
-        axios.post(`${baseUrl}/api/users/sign-up`, newUser)
+        axios.post(`/api/users/sign-up`, newUser)
             .then(res => {
                 this.setState({
                     signUpError: 'Successfully Signed In',

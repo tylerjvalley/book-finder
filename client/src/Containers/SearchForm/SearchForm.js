@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { getFromStorage, baseUrl } from '../../assets/utils';
+import { getFromStorage } from '../../assets/utils';
 import '../../App.css';
 
 
@@ -27,7 +27,7 @@ class SearchForm extends Component {
             const token = obj.token;
 
             //verify token
-            axios.get(`${baseUrl}/api/users/verify?token=${token}`)
+            axios.get(`/api/users/verify?token=${token}`)
                 .then(res => {
                     if (res) {
                         this.setState({
@@ -36,7 +36,7 @@ class SearchForm extends Component {
                         });
 
                         //get current user by id
-                        axios.get(`${baseUrl}/api/users/${res.data.id[0].userId}`)
+                        axios.get(`/api/users/${res.data.id[0].userId}`)
                              .then(user => {             
                                  this.setState({ currentUser: user.data.firstName });
                              })
@@ -65,7 +65,7 @@ class SearchForm extends Component {
         if (obj && obj.token) {
             const token = obj.token;
 
-            axios.post(`${baseUrl}/api/users/logout?token=${token}`)
+            axios.post(`/api/users/logout?token=${token}`)
                 .then(res => {
                     localStorage.removeItem('book_finder')
                     this.setState({

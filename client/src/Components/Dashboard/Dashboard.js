@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { Link } from 'react-router-dom';
-import { getBooks, getFromStorage, deleteBook, baseUrl } from '../../assets/utils';
+import { getBooks, getFromStorage, deleteBook } from '../../assets/utils';
 import axios from 'axios';
 import './Dashboard.scss';
 
@@ -19,7 +19,7 @@ class Dashboard extends Component {
 
       const token = getFromStorage('book_finder').token;
 
-      axios.get(`${baseUrl}/api/users/verify?token=${token}`)
+      axios.get(`/api/users/verify?token=${token}`)
            .then(res => {
                const loggedInUser = res.data.id[0].userId;
         
@@ -28,7 +28,7 @@ class Dashboard extends Component {
                    res.forEach(book => {
                        if (book.userId === loggedInUser) {
                             validBooks.push(book);
-                            axios.get(`http://localhost:5000/api/users/${loggedInUser}`)
+                            axios.get(`/api/users/${loggedInUser}`)
                                  .then(res => {
                                      this.setState({ currentUser: res.data.firstName })
                                  })
@@ -56,7 +56,7 @@ class Dashboard extends Component {
     addToInProgress = (selectedBook) => {
        
       
-        axios.put(`${baseUrl}/api/books/update/` + selectedBook._id, {
+        axios.put(`/api/books/update/` + selectedBook._id, {
             book_in_progress: true
         })
         .then(res => {
@@ -72,7 +72,7 @@ class Dashboard extends Component {
     }
 
     addToCompleted = (selectedBook) => {
-        axios.put(`${baseUrl}/api/books/update/` + selectedBook._id, {
+        axios.put(`/api/books/update/` + selectedBook._id, {
             book_completed: true
         })
         .then(res => {
