@@ -142,17 +142,8 @@ class SearchForm extends Component {
             },
 
             search: {
-                background: 'white',
                 width: '30%',
-                height: '4em',
                 margin: 'auto',
-                borderRadius: '2%',
-            },
-
-            label: {
-                marginLeft: '48%',
-                marginTop: '1%',
-                zIndex: '2',
             },
 
             searchButton: {
@@ -228,20 +219,21 @@ class SearchForm extends Component {
                     {buttons}
                 </div>
             
-
-                <FormControl style={styles.form}>
+                <form onSubmit={this.props.submit}>
+                    <FormControl style={styles.form}>
+                    
                 
-            
-                <TextField type="text"
-                        label="Search"
-                        className="text-field"
-                        style={styles.search}
-                        onChange={this.props.search}
-                        />
-                                         
-                    <Button style={styles.searchButton} onClick={this.props.submit}><SearchIcon style={styles.icon}/></Button>
+                        <TextField type="text"
+                                label="Search"
+                                style={styles.search}
+                                onChange={this.props.search}
+                                variant="outlined"
+                                />
+                                            
+                        <Button style={styles.searchButton} type="submit"><SearchIcon style={styles.icon}/></Button>
 
-                </FormControl>
+                    </FormControl>
+                </form>
                 
                 </>
                 );

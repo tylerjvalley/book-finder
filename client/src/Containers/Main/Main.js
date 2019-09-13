@@ -18,7 +18,8 @@ class Main extends Component {
         this.setState({search: e.target.value})
     }
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+        e.preventDefault();
 
         this.setState({ isLoading: true });
 
