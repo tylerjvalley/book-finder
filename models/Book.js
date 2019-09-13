@@ -6,7 +6,7 @@ let BookSchema = new Schema({
     userId: {
         type: String,
         required: true
-    }, 
+    },  
     
     book_title: {
         type: String,
@@ -16,6 +16,10 @@ let BookSchema = new Schema({
     book_image: {
         type: String,
         required: true
+    },
+
+    book_link: {
+        type: String,
     },
 
     book_rating: {

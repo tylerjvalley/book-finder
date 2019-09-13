@@ -22,7 +22,6 @@ class Main extends Component {
 
         axios.get(request)
         .then(res => {
-
             res.data.items.forEach(item => {
                 if (!item.volumeInfo.authors) {
                     isValid = false;

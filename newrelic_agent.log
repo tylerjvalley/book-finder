@@ -168,3 +168,187 @@
 {"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:27:09.939Z","msg":"Harvest finished."}
 {"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:28:09.732Z","msg":"Harvest started."}
 {"v":0,"level":30,"name":"newrelic","hostname":"Apples-MBP","pid":9194,"time":"2019-09-12T23:28:09.967Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:31.812Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:32.063Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:32.326Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:32.326Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:35.466Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:35.467Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BZrK-XP4LjsFACW8kRh7kT9dev44AAgBAAAnIQEAACUOAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:35.467Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:35.476Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:36.478Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:24:36.690Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:25:36.481Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:25:36.799Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:26:36.483Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:26:36.705Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:27:36.486Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:27:37.217Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:28:36.491Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:28:36.681Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:29:36.497Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:29:36.712Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:30:36.499Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:30:36.742Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:31:36.504Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:31:36.696Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:32:36.507Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9486,"time":"2019-09-13T02:32:36.740Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:47.174Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:47.401Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:47.734Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:47.735Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:51.364Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:51.364Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BbAYYKvfk9liACW8kRh7kT9dewAYAAgBAAAnIQEAACUzAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:51.365Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:51.373Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:52.378Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:32:52.629Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:33:52.384Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:33:52.618Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:34:52.392Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:34:52.633Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:35:52.395Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:35:52.624Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:36:52.398Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9523,"time":"2019-09-13T02:36:52.635Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:19.063Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:19.444Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:19.902Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:19.902Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:23.751Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:23.751Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BXLH7L7T0LM3ACW8kRh7kT9dewFEAAgBAAAnIQEAACVPAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:23.751Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:23.761Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:24.763Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:37:24.959Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:38:24.768Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9551,"time":"2019-09-13T02:38:25.143Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:43.308Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:43.974Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:44.417Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:44.418Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:48.783Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:48.783Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BRo0TcKpQCqpACW8kRh7kT9dewGAAAgBAAAnIQEAACVhAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:48.783Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:48.794Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:49.799Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:38:50.051Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:39:49.803Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9569,"time":"2019-09-13T02:39:50.033Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:19.132Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:19.572Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:20.548Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:20.549Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:25.350Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:25.351Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BTfCNGHksTpqACW8kRh7kT9dewH4AAgBAAAnIQEAACV6AgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:25.351Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:25.361Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:26.362Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:40:26.671Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:41:26.367Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:41:26.754Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:42:26.370Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9594,"time":"2019-09-13T02:42:26.603Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:30.295Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:30.965Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:32.023Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:32.024Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:37.699Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:37.700Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BSbfLxmaCk0QACW8kRh7kT9dewJwAAgBAAAnIQEAACWUAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:37.700Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:37.707Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:38.708Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:42:38.915Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:43:38.712Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:43:38.950Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:44:38.715Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9620,"time":"2019-09-13T02:44:38.945Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:06.049Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:06.253Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:06.676Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:06.676Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:10.176Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:10.177Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BSpnBHPzApJDACW8kRh7kT9dewMkAAgBAAAnIQEAACWwAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:10.177Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:10.185Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:11.188Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9648,"time":"2019-09-13T02:45:11.364Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:26.686Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:26.913Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:27.244Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:27.245Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:31.678Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:31.679Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BS9B-xqx2L-KACW8kRh7kT9dewMkAAgBAAAnIQEAACW_AgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:31.679Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:31.686Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:32.688Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9663,"time":"2019-09-13T02:45:32.892Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:32.888Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:33.248Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:33.607Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:33.607Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:37.691Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:37.692Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BVkDsq73oyvlACW8kRh7kT9dewNgAAgBAAAnIQEAACXOAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:37.692Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:37.721Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:38.729Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:46:38.955Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:47:38.733Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:47:38.956Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:48:38.735Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9678,"time":"2019-09-13T02:48:38.960Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:10.792Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:11.086Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:11.464Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:11.465Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:17.996Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:17.996Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BWGeCXLTXbwWACW8kRh7kT9dewQUAAgBAAAnIQEAACXjAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:17.996Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:18.005Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:19.006Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9699,"time":"2019-09-13T02:49:20.613Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:00.989Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:01.426Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:01.998Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:01.998Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:07.441Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:07.442Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BYvKOOKgNmPVACW8kRh7kT9dewRQAAgBAAAnIQEAACXwAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:07.442Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:07.449Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:08.456Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:50:08.666Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:51:08.463Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:51:08.693Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:52:08.467Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9712,"time":"2019-09-13T02:52:08.707Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:24.660Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:24.994Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:25.552Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:25.552Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:28.842Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:28.843Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BT4ape-u0hxHACW8kRh7kT9dewTIAAgBAAAnIQEAACYJAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:28.843Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:28.849Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:29.854Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:52:30.018Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:53:29.870Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:53:30.261Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:54:29.875Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:54:30.080Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:55:29.878Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:55:30.088Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:56:29.885Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:56:30.078Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:57:29.890Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9737,"time":"2019-09-13T02:57:30.272Z","msg":"Harvest finished."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:44.249Z","msg":"Using New Relic for Node.js. Agent version: 5.11.0; Node version: v10.15.3."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:45.068Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:46.020Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:46.020Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:51.415Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:51.416Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BVd98A7vgl7BACW8kRh7kT9dewX0AAgBAAAnIQEAACYgAgQYeP20AwAGNS4xMS4wABMyMTYtMTAyLmdyYWNlYmEubmV0AAtCb29rIEZpbmRlcg.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:51.416Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2473105/applications/410582452","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:51.423Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:52.426Z","msg":"Harvest started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"216-102.graceba.net","pid":9760,"time":"2019-09-13T02:57:52.713Z","msg":"Harvest finished."}

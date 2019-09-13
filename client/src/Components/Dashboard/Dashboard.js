@@ -13,7 +13,7 @@ class Dashboard extends Component {
     state = {
         books: [],
         currentUser: '',
-        token: '',
+        token: '', 
     }
 
     componentDidMount() {
@@ -126,7 +126,7 @@ class Dashboard extends Component {
                             border: '1px solid white',
                             color: 'white',
                         }}>
-                            Google Books Link
+                            <a rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none', color: 'white' }} href={book.book_link}>Google Books Link</a>
                             </Button>
                         <IconButton onClick={() => this.deleteBook(book)} aria-label="delete">
                             <DeleteIcon style={{ color: 'white' }} />
@@ -159,7 +159,7 @@ class Dashboard extends Component {
                             border: '1px solid white',
                             color: 'white',
                         }}>
-                            Google Books Link
+                            <a rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none', color: 'white' }} href={book.book_link}>Google Books Link</a>
                             </Button>
                         <IconButton onClick={() => this.deleteBook(book)} aria-label="delete">
                             <DeleteIcon style={{ color: 'white' }} />
@@ -185,7 +185,7 @@ class Dashboard extends Component {
                             border: '1px solid white',
                             color: 'white',
                         }}>
-                            Google Books Link
+                            <a rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none', color: 'white' }} href={book.book_link}>Google Books Link</a>
                             </Button>
                         <IconButton onClick={() => this.deleteBook(book)} aria-label="delete">
                             <DeleteIcon style={{color: 'white'}}/>

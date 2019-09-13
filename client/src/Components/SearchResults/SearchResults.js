@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 import { addBook, getFromStorage } from '../../assets/utils';
 import axios from 'axios';
 
-
+ 
 
 
 
@@ -34,6 +34,11 @@ const useStyles = makeStyles({
     title: {
         color: 'white',
         textAlign: 'center',
+    },
+
+    link: {
+        textDecoration: 'none',
+        color: 'white'
     },
 
     authors: {
@@ -66,8 +71,9 @@ const addBookHandler = (book) => {
          .then(res => {
              const addedBook = {
                  userId: res.data.id[0].userId,
-                 book_title: book.title,
-                 book_image: book.imageLinks.thumbnail,
+                 book_title: book.volumeInfo.title,
+                 book_image: book.volumeInfo.imageLinks.thumbnail,
+                 book_link: book.accessInfo.webReaderLink,
                  book_in_progress: false,
                  book_completed: false
              }
@@ -112,9 +118,9 @@ function SearchResults(props) {
                         </div>
                         <div className={classes.buttons}>
                             <Button variant="outlined" color="inherit" className={classes.button}>
-                                Google Books Link
+                                <a rel="noopener noreferrer" target="_blank" className={classes.link} href={book.accessInfo.webReaderLink}>Google Books Link</a>
                             </Button>
-                            <Button variant="outlined" color="inherit" className={classes.button} onClick={() => addBookHandler(book.volumeInfo)}>
+                            <Button variant="outlined" color="inherit" className={classes.button} onClick={() => addBookHandler(book)}>
                                 Add to Bookshelf
                             </Button>
                         </div>
