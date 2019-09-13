@@ -104,7 +104,7 @@ class SearchResults extends Component {
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-evenly',
-                alignItems: 'center',
+                alignItems: 'center'
             },
 
             author: {
@@ -130,9 +130,9 @@ class SearchResults extends Component {
             errorMessage: {
                 textAlign: 'center',
                 fontFamily: 'DM Serif Display',
-                color: 'white',
                 position: 'relative',
                 margin: 'auto',
+                color: 'grey'
             }
 
         };

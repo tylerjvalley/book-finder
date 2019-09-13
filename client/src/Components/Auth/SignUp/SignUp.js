@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Radium, { StyleRoot } from 'radium';
 import { fadeIn } from 'react-animations'
+import { setInStorage } from '../../../assets/utils';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import '../Login/Login.scss';
@@ -69,11 +70,21 @@ class SignUp extends Component {
                     signUpError: 'Successfully Signed In',
                     isLoading: false
                 })
-            }) //redirect to dashboard on success
+
+                axios.post('/api/users/login', newUser)
+                     .then(res => {
+                         setInStorage('book_finder', { token: res.data.token });
+                         window.location.reload();
+                     })
+                     .catch(err => {
+                         this.setState({
+                             signUpError: 'Problem logging in'
+                         })
+                     })
+            }) 
             .catch(err => {
-                console.log(err.response.data)
                 this.setState({
-                    signUpError: err.response.data,
+                    signUpError: 'Problem signing in',
                     isLoading: false
                 })
                 
@@ -116,27 +127,23 @@ class SignUp extends Component {
 
         }
 
-        let loading, errors;
+        let message;
 
-        if (this.state.isLoading) {
-            loading = (
+        if (this.state.isLoading && !this.state.signUpError) {
+            message = (
                 <div style={styles.messageContainer}>
                      <p style={styles.message}>Loading...</p>
                 </div>
                 );
-        } 
-
-        if (this.state.signUpError) {
-            errors = Object.values(this.state.signUpError);
-            errors.map(error => {
-                return ({error})
-            })
-          
-        } else {
-            errors = null;
+        } else if (!this.state.isLoading && this.state.signUpError) {
+            message = (
+                <div style={styles.messageContainer}>
+                    <p style={styles.message}>{this.state.signUpError}</p>
+                </div>
+            )
+        } else if (!this.state.isLoading && !this.state.signUpError) {
+            message = null;
         }
-
-        
 
         
         return (
@@ -149,10 +156,7 @@ class SignUp extends Component {
                     this.state.modalIsOpen ? <div className="LoginModalWrapper">
                         <StyleRoot>
                             <div className="SignUpModal" style={styles.fadeIn}>
-                                <div style={styles.messageContainer}>
-                                    <p style={styles.message}>{errors}</p>
-                                </div>
-                                {loading}
+                                {message}
                                 <h4 className="loginExit" onClick={() => this.modalAction('hide')}>X</h4>
                                 <div className="LogInFields">
                                     <input type="text" name="username" onChange={(e) => this.signUpInputChange(e, 'username')} placeholder="Username..." />
