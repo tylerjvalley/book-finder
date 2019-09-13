@@ -62,9 +62,6 @@ class SignUp extends Component {
             password: this.state.password,
             password2: this.state.password2,
         }
-
-        this.setState({isLoading: true})
-
        
         axios.post(`/api/users/sign-up`, newUser)
             .then(res => {

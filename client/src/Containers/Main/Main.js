@@ -10,6 +10,8 @@ class Main extends Component {
     state = {
         search: '',
         books: [],
+        isLoading: false,
+        error: ''
     }
 
     handleSearchInput = (e) => {
@@ -17,30 +19,53 @@ class Main extends Component {
     }
 
     handleSubmit = () => {
-        const request = `${bookSearchUrl}${this.state.search}&key=${apiKey}`;
-        let isValid = true;
 
-        axios.get(request)
-        .then(res => {
-            res.data.items.forEach(item => {
-                if (!item.volumeInfo.authors) {
-                    isValid = false;
+        this.setState({ isLoading: true });
+
+        if (this.state.search) {
+            
+        
+            const request = `${bookSearchUrl}${this.state.search}&key=${apiKey}`;
+            let isValid = true;
+
+            axios.get(request)
+            .then(res => {
+                res.data.items.forEach(item => {
+                    if (!item.volumeInfo.authors) {
+                        isValid = false;
+                    }
+                    
+                })
+
+                //check for valid search based on if the searched book has authors.
+                if (isValid) {
+                    this.setState({ 
+                        isLoading: false,
+                        books: res.data.items,
+                        error: '',
+                    })
+                } else {
+                    this.setState({
+                        isLoading: false,
+                        error: 'No results found'
+                    })
                 }
-                
+            
+            
             })
+            .catch(error => {
+                this.setState({
+                    isLoading: false,
+                    error: 'No results found'
+                })          
+            });
 
-            //check for valid search based on if the searched book has authors.
-            if (isValid) {
-                this.setState({ books: res.data.items })
-            } else {
-                alert('no results found');
-            }
-           
-           
-        })
-        .catch(error => {
-            console.log(error);          
-        });
+        } else {
+            this.setState({
+                isLoading: false,
+                error: 'Try actually typing in something'
+            })
+        }
 
     }
     
@@ -50,7 +75,10 @@ class Main extends Component {
         return (
             <>
             <SearchForm search={this.handleSearchInput}
-                        submit={this.handleSubmit} /> 
+                        submit={this.handleSubmit}
+                        error={this.state.error}
+                        loading={this.state.isLoading} 
+                        /> 
             
             <SearchResults books={this.state.books}/>
             

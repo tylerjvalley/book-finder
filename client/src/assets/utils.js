@@ -53,20 +53,6 @@ export const logoutUser = () => {
 }
 
 
-
-//add a book
-
-export const addBook = (book) => {
-    axios.post(`/api/books/add-book`, book)
-         .then(res => {
-             console.log('book added successfully')
-         })
-         .catch(err => {
-             console.log(err);
-         })
-}
-
-
 //delete book 
 export const deleteBook = (book) => {
     axios.delete(`/api/books/delete/` + book._id)

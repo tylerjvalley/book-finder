@@ -49,6 +49,8 @@ class Login extends Component {
     submitLogin = (e) => {
        e.preventDefault();
 
+       this.setState({ isLoading: true });
+
        const userData = {
            username: this.state.username,
            password: this.state.password

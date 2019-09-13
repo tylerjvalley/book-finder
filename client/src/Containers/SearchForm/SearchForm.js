@@ -116,14 +116,16 @@ class SearchForm extends Component {
 
             },
 
-            loadingContainer: {
+            messageContainer: {
                 background: '#66ff66',
                 width: '100%',
+                height: '30px'
             },
 
-            loading: {
+            message: {
                 textAlign: 'center',
-                fontFamily: 'DM Serif Display'
+                fontFamily: 'DM Serif Display',
+                margin: 'auto',
 
             },
 
@@ -194,12 +196,14 @@ class SearchForm extends Component {
             )
         }
 
-        let loading, title;
+        let message, title;
 
-        if (this.state.isLoading) {
-            loading = (<div style={styles.loadingContainer}><p style={styles.loading}>Loading...</p></div>)
-        } else {
-            loading = null;
+        if (this.state.isLoading && !this.props.error) {
+            message = (<div style={styles.messageContainer}><p style={styles.message}>Loading...</p></div>)
+        } else if (!this.state.loading && this.props.error) {
+            message = (<div style={styles.messageContainer}><p style={styles.message}>{this.props.error}</p></div>);
+        } else if (!this.state.loading && !this.props.error) {
+            message = null
         }
 
         
@@ -214,7 +218,7 @@ class SearchForm extends Component {
 
         return (<>
                 <div style={styles.top}>
-                 {loading}
+                    {message}
                     <div style={styles.titleContainer}>   
                         {title}
                     </div>
