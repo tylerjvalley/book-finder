@@ -16,11 +16,7 @@ class SearchResults extends Component {
 
     }
 
-
     addBookHandler = (book) => {
-
-        //get information about selected book
-        console.log(book);
 
         this.setState({ isLoading: true });
 

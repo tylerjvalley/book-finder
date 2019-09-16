@@ -3,6 +3,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import SearchResults from '../../Components/SearchResults/SearchResults';
 import axios from 'axios';
 import { apiKey, bookSearchUrl } from '../../assets/assets';
+import { animateScroll as scroll } from 'react-scroll'
 
 
 class Main extends Component {
@@ -14,6 +15,12 @@ class Main extends Component {
         error: ''
     }
 
+    // automatically scroll down 700px when search results are rendered
+    scrollTo = () => {
+        scroll.scrollTo(700);
+    }
+
+  
     handleSearchInput = (e) => {
         this.setState({search: e.target.value})
     }
@@ -45,6 +52,8 @@ class Main extends Component {
                         books: res.data.items,
                         error: '',
                     })
+                    
+                    this.scrollTo();
                 } else {
                     this.setState({
                         isLoading: false,
@@ -80,9 +89,11 @@ class Main extends Component {
                         error={this.state.error}
                         loading={this.state.isLoading} 
                         /> 
-            
+
+
             <SearchResults books={this.state.books}/>
-            
+      
+      
         
 
             </>
