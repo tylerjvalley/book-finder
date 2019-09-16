@@ -42,7 +42,19 @@ class Dashboard extends Component {
                                             validBooks.push(book);
                                         }
                                     })
-                                    this.setState({ books: validBooks });
+
+                                    //only add books with unique titles so users don't add the same book twice.
+                                    const seen = new Set();
+                                    
+                                    const results = validBooks.filter(el => {
+                                        const duplicate = seen.has(el.book_title);
+                                        seen.add(el.book_title)
+                                        return !duplicate
+                                    })
+                                    
+                                    //set results in state
+                                    this.setState({ books: results });
+                                    
                                 })
                                     .catch(err => {
                                         console.log(err)

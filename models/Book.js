@@ -5,7 +5,6 @@ let BookSchema = new Schema({
 
     userId: {
         type: String,
-        required: true
     },  
     
     book_title: {

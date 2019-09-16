@@ -19,6 +19,9 @@ class SearchResults extends Component {
 
     addBookHandler = (book) => {
 
+        //get information about selected book
+        console.log(book);
+
         this.setState({ isLoading: true });
 
         let user = getFromStorage('book_finder');
@@ -27,9 +30,9 @@ class SearchResults extends Component {
 
             axios.get(`/api/users/verify?token=${user.token}`)
                 .then(res => {
-
-                    const addedBook = {
-                        userId: res.data.id[0].userId,
+                    
+                    const addedBook = { 
+                        userId: res.data.id[0].userId, 
                         book_title: book.volumeInfo.title,
                         book_image: book.volumeInfo.imageLinks.thumbnail,
                         book_link: book.accessInfo.webReaderLink,
@@ -39,6 +42,7 @@ class SearchResults extends Component {
 
                     axios.post(`/api/books/add-book`, addedBook)
                         .then(res => {
+                            console.log(addedBook)
                             this.setState({
                                 isLoading: false,
                                 error: 'Book added successfully',

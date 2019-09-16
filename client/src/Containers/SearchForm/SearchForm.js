@@ -143,7 +143,7 @@ class SearchForm extends Component {
 
             search: {
                 width: '30%',
-                margin: 'auto',
+                margin: 'auto'
             },
 
             searchButton: {
@@ -153,11 +153,6 @@ class SearchForm extends Component {
                 color: 'white'
             },
 
-            icon: {
-                '&:hover': {
-                    color: 'white'
-                }
-            },
         }
 
         let buttons;
