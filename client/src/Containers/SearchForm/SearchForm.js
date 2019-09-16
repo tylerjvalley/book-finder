@@ -149,17 +149,15 @@ class SearchForm extends Component {
             searchButton: {
                 width: '15%',
                 margin: '1em auto',
-                border: '1px solid #2B4570',
-                '&:hover': {
-                    border: '1px solid white'
-                }
+                border: '1px solid white',
+                color: 'white'
             },
 
             icon: {
                 '&:hover': {
                     color: 'white'
                 }
-            }
+            },
         }
 
         let buttons;
@@ -221,13 +219,12 @@ class SearchForm extends Component {
             
                 <form onSubmit={this.props.submit}>
                     <FormControl style={styles.form}>
-                    
-                
                         <TextField type="text"
                                 label="Search"
                                 style={styles.search}
                                 onChange={this.props.search}
                                 variant="outlined"
+                                className="textfield"
                                 />
                                             
                         <Button style={styles.searchButton} type="submit"><SearchIcon style={styles.icon}/></Button>

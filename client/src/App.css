@@ -10,7 +10,10 @@ body {
   color: white;
 }
 
-.text-field label {
-  position: relative;
-  margin: auto;
+.textfield fieldset {
+  border-color: white;
+}
+
+.textfield label {
+  color: white;
 }
